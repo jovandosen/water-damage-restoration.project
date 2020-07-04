@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title></title>
-        <?php wp_head(); ?>
-    </head>
-    <body>
-
-        <h1>test</h1>
-
-        <?php wp_footer(); ?>
-    </body>
-</html>
+<?php get_header(); ?>
+    <h1>Well and Good</h1>
+<?php get_footer(); ?>        
