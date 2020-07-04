@@ -14,3 +14,14 @@
         <?php wp_head(); ?>
     </head>
     <body>
+        <?php 
+            wp_nav_menu(array(
+                'theme_location' => 'navigation-menu',
+                'container' => 'div',
+                'container_id' => 'navigation-links-container',
+                'container_class' => 'navigation-links-style',
+                'menu_id' => 'nav-menu',
+                'menu_class' => 'nav-menu-style',
+                'depth' => 0
+            )); 
+        ?>

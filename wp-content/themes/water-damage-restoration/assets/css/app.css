@@ -1,3 +1,26 @@
-body {
-    background-color: lightblue;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#navigation-links-container ul {
+    list-style-type: none;
+    text-align: right;
+}
+
+#navigation-links-container ul li {
+    display: inline-block;
+    margin-left: 5px;
+    padding: 5px;
+}
+
+#navigation-links-container ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+#navigation-links-container ul li a:hover {
+    text-decoration: underline;
 }

@@ -11,7 +11,7 @@ add_action('wp_enqueue_scripts', 'loadAssets');
 function homepageTitle($title)
 {
     if(empty($title) && (is_home() || is_front_page())){
-        $title = __('Homepage', 'water-damage-restoration');
+        $title = __('Home', 'water-damage-restoration');
     }
     return $title;
 }
@@ -24,5 +24,14 @@ function themeSettings()
 }
 
 add_action('after_setup_theme', 'themeSettings');
+
+function registerNavigationMenus()
+{
+    register_nav_menus(array(
+        'navigation-menu' => __('Navigation Menu')
+    ));
+}
+
+add_action('init', 'registerNavigationMenus');
 
 ?>
