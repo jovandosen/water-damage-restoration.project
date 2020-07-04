@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+#navigation-links-container {
+    width: 65%;
+    margin-left: auto;
+}
+
 #navigation-links-container ul {
     list-style-type: none;
     text-align: right;
@@ -23,4 +28,29 @@
 
 #navigation-links-container ul li a:hover {
     text-decoration: underline;
+}
+
+#top-info {
+    width: 100%;
+    background-color: orange;
+    padding: 5px;
+}
+
+#top-info p {
+    margin-left: 17%;
+}
+
+#header-content {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+}
+
+#logo-container {
+    float: left;
+}
+
+#links-container {
+    padding-top: 10px;
 }
