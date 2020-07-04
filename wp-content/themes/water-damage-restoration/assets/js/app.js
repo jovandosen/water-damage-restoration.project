@@ -1,6 +1,8 @@
 (function ($, window, document) {
     'use strict';
     $(document).ready(function () { 
-        console.log('some text 1231231231');  
+        $("#toggle-nav-links").on("click", function(){
+            $("#links-container").toggle('slow');
+        });
     });
 }(jQuery, window, document));
