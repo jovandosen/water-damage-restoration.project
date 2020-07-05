@@ -324,4 +324,26 @@ input[type="text"] {
         margin-top: 30px;
     }
 
+    /* Contact form media queries */
+
+    #name, #email, #phone-number, #short-description, #contact-button {
+        width: 100%;
+    }
+
+    #contact-container {
+        height: 205px;
+        padding-top: 35px;
+    }
+
+    #contact-form-container, #contact-button-container {
+        margin-left: 1%;
+    }
+
+    #name-container, #email-container, #phone-number-container, #short-description-container, #contact-button-container {
+        float: none;
+        margin-bottom: 5px;
+    }
+
+    /* End of Contact form media queries */
+
 }
