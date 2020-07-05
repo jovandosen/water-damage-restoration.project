@@ -203,7 +203,41 @@ input[type="text"] {
 
     #header-content {
         padding-left: 10px;
+        position: relative;
     }
+
+    #image-selectors-box {
+        left: 45%;
+    }
+
+    #carousel-container {
+        margin-top: 50px;
+    }
+
+    /* Contact form media queries */
+
+    #name, #email, #phone-number, #short-description, #contact-button {
+        width: 100%;
+    }
+
+    #contact-container {
+        height: 185px;
+    }
+
+    #contact-form-container {
+        margin-left: 1%;
+    }
+
+    #name-container, #email-container, #phone-number-container, #short-description-container, #contact-button-container {
+        float: none;
+        margin-bottom: 5px;
+    }
+
+    #contact-button-container {
+        margin-left: 0;
+    }
+
+    /* End of Contact form media queries */
 
 }
 
@@ -253,7 +287,45 @@ input[type="text"] {
 
     #header-content {
         padding-left: 10px;
+        position: relative;
     }
+
+    #image-selectors-box {
+        left: 42%;
+    }
+
+    #carousel-details {
+        left: 44%;
+    }
+
+    #carousel-container {
+        margin-top: 50px;
+    }
+
+    /* Contact form media queries */
+
+    #name, #email, #phone-number, #short-description, #contact-button {
+        width: 100%;
+    }
+
+    #contact-container {
+        height: 185px;
+    }
+
+    #contact-form-container {
+        margin-left: 1%;
+    }
+
+    #name-container, #email-container, #phone-number-container, #short-description-container, #contact-button-container {
+        float: none;
+        margin-bottom: 5px;
+    }
+
+    #contact-button-container {
+        margin-left: 0;
+    }
+
+    /* End of Contact form media queries */
 
 }
 
