@@ -4,18 +4,30 @@ var selectorsDisplayed = false;
 function homepageCarousel()
 {
     var basePath = themeData.templateUrl;
-    var images = ['forest.jpg', 'rocks.jpg', 'water.jpg'];
+    var data = [
+        { img: 'forest.jpg', titleOne: 'Test', titleTwo: 'Foo', description: 'test test', buttonText: 'Example' },
+        { img: 'rocks.jpg', titleOne: 'Test2', titleTwo: 'Foo2', description: 'test test2', buttonText: 'Example2' },
+        { img: 'water.jpg', titleOne: 'Test3', titleTwo: 'Foo3', description: 'test test3', buttonText: 'Example3' }
+    ];
     var img = document.getElementById("carousel-img");
     var imageSelectorsBox = document.getElementById("image-selectors-box");
+    var titleOneContent = document.getElementById("title-one-content");
+    var titleTwoContent = document.getElementById("title-two-content");
+    var descriptionContent = document.getElementById("description-content");
+    var buttonContent = document.getElementById("read-more-btn-content");
     var activeItem;
     var inActiveItem;
-    totalImages = images.length;
+    totalImages = data.length;
     if(current === totalImages){
         inActiveItem = document.getElementById(current - 1);
         inActiveItem.removeAttribute("style");
         current = 0;
     }
-    img.src = basePath + '/assets/images/' + images[current];
+    img.src = basePath + '/assets/images/' + data[current].img;
+    titleOneContent.innerHTML = data[current].titleOne;
+    titleTwoContent.innerHTML = data[current].titleTwo;
+    descriptionContent.innerHTML = data[current].description;
+    buttonContent.innerHTML = data[current].buttonText;
     current++;
     if(!selectorsDisplayed){
         selectorsDisplayed = true;
