@@ -44,7 +44,7 @@ function homepageCarousel()
         inActiveItem = document.getElementById(current - 2);
         inActiveItem.removeAttribute("style");
     }
-    activeItem.setAttribute("style", "background-color: red");
+    activeItem.setAttribute("style", "background-color: white");
     timer = setTimeout(homepageCarousel, 3000);
 }
 
