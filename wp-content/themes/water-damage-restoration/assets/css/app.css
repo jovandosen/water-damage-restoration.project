@@ -115,6 +115,11 @@
     transition: 0.3s;
 }
 
+#top-info img {
+    width: 16px;
+    height: 16px;
+}
+
 /* Contact Styles */
 
 #contact-container {

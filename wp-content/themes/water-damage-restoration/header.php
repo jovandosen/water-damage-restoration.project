@@ -15,7 +15,10 @@
     </head>
     <body>
         <div id="top-info">
-            <p>24/7 Local Response <strong>1-800-123-4567</strong></p>
+            <p>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/phone.png" alt="Phone">
+                24/7 Local Response <strong>1-800-123-4567</strong>
+            </p>
         </div>
         <div id="header-content">
             <div id="logo-container">
