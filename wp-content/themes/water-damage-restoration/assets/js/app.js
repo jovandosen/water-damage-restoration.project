@@ -9,8 +9,10 @@
         $(window).scroll(function(){
             if($(this).scrollTop() > 0){
                 $("#top-info").fadeOut();
+                $("#header-content").css({"top":"0"});
             } else {
                 $("#top-info").fadeIn();
+                $("#header-content").css({"top":"7%"});
             }
         });
 
