@@ -23,4 +23,23 @@
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/contact.png" alt="Contact Us">
         </div>
     </div>
+    <div id="side-form-container" style="display: none;">
+        <form>
+            <div id="contact-name-box">
+                <input type="text" name="contactName" id="contact-name" placeholder="* Name" autocomplete="off">
+            </div>
+            <div id="contact-email-box">
+                <input type="text" name="contactEmail" id="contact-email" placeholder="* Email" autocomplete="off">
+            </div>
+            <div id="contact-phone-number-box">
+                <input type="text" name="contactPhoneNumber" id="contact-phone-number" placeholder="* Phone Number" autocomplete="off">
+            </div>
+            <div id="contact-description-box">
+                <input type="text" name="contactDescription" id="contact-description" placeholder="* Short Description" autocomplete="off">
+            </div>
+            <div id="contact-button-box">
+                <button type="button" id="contact-btn">24/7 Emergency Services</button>
+            </div>
+        </form>
+    </div>
 </div>

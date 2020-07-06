@@ -101,14 +101,14 @@
     margin-top: 30px;
 }
 
-#read-more-btn-content {
+#read-more-btn-content, #contact-btn {
     padding: 7px 20px 7px 20px;
     border: 0;
     background-color: #00ccff;
     color: white;
 }
 
-#read-more-btn-content:hover, #contact-button:hover, #side-contact-form-box:hover {
+#read-more-btn-content:hover, #contact-button:hover, #side-contact-form-box:hover, #contact-btn:hover {
     cursor: pointer;
     background-color: white;
     color: black;
@@ -180,6 +180,24 @@ input[type="text"] {
     width: 30px;
     height: 30px;
     transform: rotate(90deg);
+}
+
+#side-form-container {
+    width: 248px;
+    height: 187px;
+    background-color: #808080;
+    position: absolute;
+    top: 27%;
+    left: 85%;
+    padding: 5px;
+}
+
+#contact-name, #contact-email, #contact-phone-number, #contact-description, #contact-btn {
+    width: 100%;
+}
+
+#contact-name-box, #contact-email-box, #contact-phone-number-box, #contact-description-box, #contact-button-box {
+    margin-bottom: 5px;
 }
 
 /* End of Contact Styles */

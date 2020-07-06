@@ -22,5 +22,9 @@
             }
         });
 
+        $("#side-contact-form-box").on("click", function(){
+            $("#side-form-container").toggle("slow");
+        });
+
     });
 }(jQuery, window, document));
