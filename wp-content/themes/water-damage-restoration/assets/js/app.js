@@ -17,6 +17,8 @@
         $(window).on("resize", function(){
             if($(window).width() > 992){
                 $("#links-container").show();
+            } else {
+                $("#links-container").hide();
             }
         });
 

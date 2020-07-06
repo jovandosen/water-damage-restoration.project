@@ -66,7 +66,7 @@
 
 #image-selectors-box {
     position: absolute;
-    left: 46%;
+    left: 47%;
     top: 92%;
 }
 
@@ -76,7 +76,7 @@
     width: 20px;
     height: 20px;
     display: inline-block;
-    margin-left: 15px;
+    margin-left: 10px;
 }
 
 .image-selector:hover {
@@ -86,7 +86,7 @@
 #carousel-details {
     position: absolute;
     top: 25%;
-    left: 47%;
+    left: 46%;
     text-align: center;
     color: white;
 }
@@ -207,7 +207,7 @@ input[type="text"] {
     }
 
     #image-selectors-box {
-        left: 45%;
+        left: 46%;
     }
 
     #carousel-container {
@@ -217,15 +217,18 @@ input[type="text"] {
     /* Contact form media queries */
 
     #name, #email, #phone-number, #short-description, #contact-button {
-        width: 100%;
+        width: 49%;
+        float: left;
+        margin-right: 5px;
+        margin-bottom: 5px;
     }
 
     #contact-container {
-        height: 185px;
+        height: 120px;
     }
 
     #contact-form-container {
-        margin-left: 1%;
+        margin-left: 2%;
     }
 
     #name-container, #email-container, #phone-number-container, #short-description-container, #contact-button-container {
@@ -291,7 +294,7 @@ input[type="text"] {
     }
 
     #image-selectors-box {
-        left: 42%;
+        left: 44%;
     }
 
     #carousel-details {
@@ -385,11 +388,12 @@ input[type="text"] {
     }
 
     #image-selectors-box {
-        left: 36%;
+        left: 38%;
+        margin-top: 20px;
     }
 
     #carousel-details {
-        left: 40%;
+        left: 38%;
     }
 
     #carousel-container {
@@ -403,7 +407,7 @@ input[type="text"] {
     }
 
     #contact-container {
-        height: 205px;
+        height: 210px;
         padding-top: 35px;
     }
 
