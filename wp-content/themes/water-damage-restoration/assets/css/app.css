@@ -157,6 +157,78 @@ input[type="text"] {
 
 /* Media Queries */
 
+@media (max-width: 1920px) {
+
+    #name, #email, #phone-number, #contact-button {
+        width: 13%;
+        float: left;
+        margin-right: 3px;
+        margin-bottom: 5px;
+    }
+
+    #short-description {
+        width: 26%;
+        float: left;
+        margin-right: 3px;
+        margin-bottom: 5px;
+    }
+
+    #name-container, #email-container, #phone-number-container, #short-description-container, #contact-button-container {
+        float: none;
+        margin-bottom: 5px;
+    }
+
+    #image-selectors-box {
+        left: 46%;
+    }
+
+    #contact-container {
+        height: 60px;
+    }
+
+    #contact-button-container {
+        margin-left: 0;
+    }
+
+    #contact-button {
+        height: 30px;
+        padding: 0;
+    }
+
+}
+
+@media (max-width: 1200px) {
+
+    #name, #email, #phone-number, #short-description, #contact-button {
+        width: 26%;
+        float: left;
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
+
+    #name-container, #email-container, #phone-number-container, #short-description-container, #contact-button-container {
+        float: none;
+        margin-bottom: 5px;
+    }
+
+    #contact-container {
+        height: 90px;
+    }
+
+    #image-selectors-box {
+        left: 46%;
+    }
+
+    #contact-button-container {
+        margin-left: 0;
+    }
+
+    #navigation-links-container ul li a {
+        font-size: 16px;
+    }
+
+}
+
 @media (max-width: 992px) {
     
     #links-container {
