@@ -108,7 +108,7 @@
     color: white;
 }
 
-#read-more-btn-content:hover, #contact-button:hover {
+#read-more-btn-content:hover, #contact-button:hover, #side-contact-form-box:hover {
     cursor: pointer;
     background-color: white;
     color: black;
@@ -151,6 +151,35 @@ input[type="text"] {
 
 #contact-button-container {
     margin-left: 19%;
+}
+
+#side-contact-form-box {
+    position: absolute;
+    top: 50%;
+    left: 95%;
+    color: white;
+    transform: rotate(271deg);
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 10px 15px;
+    background-color: #00ccff;
+    width: 150px;
+}
+
+#contact-us-icon-box {
+    position: absolute;
+    width: 35px;
+    height: 37px;
+    background-color: orange;
+    top: 0;
+    left: 100%;
+    padding: 3px;
+}
+
+#contact-us-icon-box img {
+    width: 30px;
+    height: 30px;
+    transform: rotate(90deg);
 }
 
 /* End of Contact Styles */

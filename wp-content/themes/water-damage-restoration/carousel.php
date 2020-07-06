@@ -17,4 +17,10 @@
     <div id="image-selectors-box">
         <!-- Image selectors -->
     </div>
+    <div id="side-contact-form-box">
+        <p id="side-contact-form-text">Contact Us</p>
+        <div id="contact-us-icon-box">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/contact.png" alt="Contact Us">
+        </div>
+    </div>
 </div>
