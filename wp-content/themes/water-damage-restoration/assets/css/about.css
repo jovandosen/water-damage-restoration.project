@@ -1,0 +1,63 @@
+#about-us-box {
+    margin-top: 34%;
+    margin-left: 17%;
+    margin-right: 17%;
+}
+
+#about-us-title-box {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 4%;
+    color: #007acc;
+}
+
+#professionals-image-box, #trusted-image-box, #our-equipment-image-box {
+    float: left;
+    margin-right: 20px;
+}
+
+#professionals-details-title, #trusted-details-title, #our-equipment-details-title {
+    margin-bottom: 30px;
+}
+
+#professionals-box, #trusted-box, #our-equipment-box {
+    width: 33%;
+    float: left;
+}
+
+#professionals-image-box img, #trusted-image-box img, #our-equipment-image-box img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+#professionals-box, #trusted-box {
+    margin-right: 5px;
+}
+
+@media (max-width: 576px) {
+
+    #professionals-box, #trusted-box, #our-equipment-box {
+        width: 100%;
+        float: none;
+    }
+
+    #about-us-box {
+        margin-right: 5%;
+        margin-left: 5%;
+        margin-top: 10%;
+    }
+
+    #professionals-box, #trusted-box, #our-equipment-box {
+        margin-bottom: 25px;
+    }
+
+    #professionals-details-title, #trusted-details-title, #our-equipment-details-title {
+        margin-bottom: 15px;
+    }
+
+    #professionals-details-description, #trusted-details-description, #our-equipment-details-description {
+        font-size: 15px;
+    }
+
+}
