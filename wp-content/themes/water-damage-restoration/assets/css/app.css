@@ -67,8 +67,10 @@
 
 #image-selectors-box {
     position: absolute;
-    left: 47%;
+    /*left: 47%;*/
     top: 92%;
+    align-items: center;
+    display: flex;
 }
 
 .image-selector {
@@ -87,7 +89,7 @@
 #carousel-details {
     position: absolute;
     top: 25%;
-    left: 46%;
+    left: 47%;
     text-align: center;
     color: white;
 }
@@ -232,7 +234,7 @@ input[type="text"] {
     }
 
     #image-selectors-box {
-        left: 46%;
+        left: 47%;
     }
 
     #contact-container {

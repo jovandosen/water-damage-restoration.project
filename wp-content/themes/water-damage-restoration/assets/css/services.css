@@ -86,10 +86,18 @@
 @media (max-width: 1200px) {
 
     #water-damage, #storm-damage, #mold-remediation {
-        width: 46%;
+        width: 49%;
         float: left;
         height: auto;
         margin-bottom: 10px;
+    }
+
+    #water-damage {
+        margin-right: 10px;
+    }
+
+    #storm-damage {
+        margin-right: 0;
     }
 
 }
