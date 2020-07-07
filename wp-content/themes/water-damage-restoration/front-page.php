@@ -4,4 +4,5 @@
     <?php get_template_part('services'); ?>
     <?php get_template_part('about'); ?>
     <?php get_template_part('emergency'); ?>
+    <?php get_template_part('help-info'); ?>
 <?php get_footer(); ?>        

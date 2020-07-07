@@ -67,7 +67,6 @@
 
 #image-selectors-box {
     position: absolute;
-    /*left: 47%;*/
     top: 92%;
     align-items: center;
     display: flex;
@@ -121,6 +120,7 @@
 #top-info img {
     width: 16px;
     height: 16px;
+    transform: rotate(46deg);
 }
 
 /* Contact Styles */

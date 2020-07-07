@@ -1,0 +1,54 @@
+#help-info-box {
+    margin-top: 19%;
+    width: 100%;
+    height: 110px;
+    background-color: orange;
+    padding: 20px;
+}
+
+#help-info-content-box {
+    margin-left: 17%;
+    margin-right: 17%;
+}
+
+#message-box {
+    float: left;
+    width: 50%;
+    padding-right: 10%;
+    padding-top: 10px;
+}
+
+#phone-number-help-box {
+    float: left;
+    width: 50%;
+    padding-left: 7%;
+    font-size: 30px;
+}
+
+#phone-number-help-box img {
+    width: 30px;
+    height: 30px;
+    padding-top: 1%;
+    transform: rotate(52deg);
+}
+
+#request-online-help-btn {
+    padding: 10px 50px;
+    margin-left: 5px;
+    border: 0;
+    background-color: #00ccff;
+    color: white;
+}
+
+#request-online-help-btn:hover {
+    color: black;
+    background-color: white;
+    transition: 0.3s;
+}
+
+#message-box img {
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin-right: 10px;
+}
