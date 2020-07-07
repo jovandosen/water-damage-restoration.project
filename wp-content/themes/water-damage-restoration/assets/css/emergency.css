@@ -40,4 +40,139 @@
 
 #do-list {
     padding-right: 30px;
+    margin-left: 6px;
+}
+
+#dont-list {
+    margin-left: 10px;
+}
+
+@media (max-width: 1600px) {
+
+    #emergency-box {
+        margin-top: 16%;
+    }
+
+    #do-title h4 {
+        margin-right: 83%;
+    }
+
+    #do-list {
+        margin-left: 23px;
+    }
+
+    #dont-title h4 {
+        margin-right: 79%;
+    }
+
+    #dont-list {
+        margin-left: 26px;
+    }
+
+}
+
+@media (max-width: 1200px) {
+
+    #emergency-box {
+        margin-top: 33%;
+    }
+
+    #do-list {
+        margin-left: 35px;
+    }
+
+    #do-title h4 {
+        margin-right: 77%;
+    }
+
+    #dont-title h4 {
+        margin-right: 72%;
+    }
+
+    #dont-list {
+        margin-left: 38px;
+    }
+
+}
+
+@media (max-width: 992px) {
+
+    #emergency-box {
+        margin-top: 10%;
+    }
+
+    #do-title h4 {
+        margin-right: 72%;
+    }
+
+    #do-list {
+        margin-left: 39px;
+    }
+
+    #dont-title h4 {
+        margin-right: 66%;
+    }
+
+    #dont-list {
+        margin-left: 41px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    #emergency-box {
+        margin-top: 13%;
+        margin-left: 7%;
+        margin-right: 7%;
+    }
+
+    #do-title h4 {
+        margin-right: 72%;
+    }
+
+    #do-list, #dont-list {
+        margin-left: 39px;
+    }
+
+    #dont-title h4 {
+        margin-right: 67%;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    #emergency-box {
+        margin-top: 13%;
+        margin-left: 7%;
+        margin-right: 7%;
+    }
+
+    #emergency-do-box, #emergency-dont-box {
+        float: none;
+        width: 100%;
+    }
+
+    #do-title h4 {
+        margin-right: 75%;
+    }
+
+    #do-list {
+        margin-left: 35px;
+        padding-right: 0;
+    }
+
+    #dont-title h4 {
+        margin-right: 70%;
+    }
+
+    #dont-list {
+        margin-left: 35px;
+    }
+
+    #emergency-dont-box {
+        margin-top: 20px;
+    }
+
 }
