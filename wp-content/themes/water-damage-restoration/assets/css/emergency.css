@@ -1,0 +1,43 @@
+#emergency-box {
+    margin-top: 13%;
+    margin-left: 17%;
+    margin-right: 17%;
+}
+
+#emergency-title-box {
+    text-align: center;
+    text-transform: uppercase;
+    color: #007acc;
+    margin-bottom: 3%;
+}
+
+#emergency-do-box, #emergency-dont-box {
+    float: left;
+    width: 50%;
+}
+
+#do-title img, #dont-title img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+#do-title h4 {
+    float: right;
+    margin-right: 88%;
+    padding-top: 12px;
+}
+
+#do-list, #dont-list {
+    padding-left: 9%;
+}
+
+#dont-title h4 {
+    float: right;
+    margin-right: 85%;
+    padding-top: 12px;
+}
+
+#do-list {
+    padding-right: 30px;
+}
