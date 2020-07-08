@@ -1,0 +1,96 @@
+#main-logo-box {
+    width: 100%;
+}
+
+#main-logo-content {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 2%;
+}
+
+#iicrc-box, #bbb-box, #eaa-box, #icra-box {
+    float: left;
+    margin-right: 8%;
+}
+
+@media (max-width: 1600px) {
+
+    #iicrc-box, #bbb-box, #eaa-box, #icra-box {
+        float: left;
+        margin-right: 2%;
+    }
+
+}
+
+@media (max-width: 1200px) {
+
+    #iicrc-box, #eaa-box {
+        float: left;
+        width: 50%;
+        margin-top: 2%;
+    }
+
+    #bbb-box, #icra-box {
+        float: none;
+        width: 100%;
+        margin-top: 2%;
+    }
+
+}
+
+@media (max-width: 992px) {
+
+    #main-logo-content {
+        margin-left: 18%;
+        margin-right: 15%;
+    }
+
+    #iicrc-box, #eaa-box {
+        float: left;
+        width: 50%;
+        margin-top: 2%;
+    }
+
+    #bbb-box, #icra-box {
+        float: none;
+        width: 100%;
+        margin-top: 2%;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    #main-logo-content {
+        margin-left: 10%;
+        margin-right: 6%;
+    }
+
+    #iicrc-box, #eaa-box {
+        float: left;
+        width: 50%;
+        margin-top: 2%;
+    }
+
+    #bbb-box, #icra-box {
+        float: none;
+        width: 100%;
+        margin-top: 2%;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    #main-logo-content {
+        margin-left: 20%;
+        margin-right: 0;
+    }
+
+    #iicrc-box, #bbb-box, #eaa-box, #icra-box {
+        float: none;
+        width: 100%;
+        margin-top: 5%;
+    }
+
+}

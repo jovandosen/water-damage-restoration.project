@@ -5,4 +5,5 @@
     <?php get_template_part('about'); ?>
     <?php get_template_part('emergency'); ?>
     <?php get_template_part('help-info'); ?>
+    <?php get_template_part('logo-details'); ?>
 <?php get_footer(); ?>        
