@@ -1,4 +1,5 @@
-            <div id="footer-content">
+            <div id="footer-content" 
+                style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/BG.png);">
                 <div id="footer-details">
                     <div id="footer-about-us">
                         <div id="footer-about-us-image-box">

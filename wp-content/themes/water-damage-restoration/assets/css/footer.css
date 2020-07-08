@@ -52,6 +52,7 @@
 
 #footer-our-services-description a {
     text-decoration: none;
+    color: #808080;
 }
 
 #footer-our-services-description a:hover {
@@ -60,14 +61,12 @@
 
 #footer-about-us-description {
     width: 60%;
+    padding-top: 5px;
+    color: #808080;
 }
 
 .extra-padd {
     margin-left: 7px;
-}
-
-#footer-about-us-description {
-    padding-top: 5px;
 }
 
 #footer-emergency-services-title-box h3 {
