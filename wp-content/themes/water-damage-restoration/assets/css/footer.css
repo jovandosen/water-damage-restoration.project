@@ -72,3 +72,31 @@
 #footer-emergency-services-title-box h3 {
     margin-left: 70px;
 }
+
+#social-media-content {
+    margin-top: 10%;
+    text-align: center;
+    margin-left: 45%;
+}
+
+#social-media-icons-box img {
+    width: 30px;
+    height: 30px;
+}
+
+.circle-data {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid white;
+    float: left;
+    margin-right: 20px;
+    padding-top: 11px;
+}
+
+#copy-right-box {
+    padding-top: 9%;
+    padding-right: 80%;
+    text-align: center;
+    color: orange;
+}

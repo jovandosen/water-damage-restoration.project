@@ -48,6 +48,22 @@
                         </div>
                     </div>
                 </div>
+                <div id="social-media-content">
+                    <div id="social-media-icons-box">
+                        <div class="circle-data">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook.png" alt="Facebook">
+                        </div>
+                        <div class="circle-data">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter.png" alt="Twitter">
+                        </div>
+                        <div class="circle-data">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/instagram.png" alt="Instagram">
+                        </div>
+                    </div>
+                    <div id="copy-right-box">
+                        <p>&copy; - Water Restoration</p>
+                    </div>
+                </div>
             </div>
         <?php wp_footer(); ?>
     </body>
