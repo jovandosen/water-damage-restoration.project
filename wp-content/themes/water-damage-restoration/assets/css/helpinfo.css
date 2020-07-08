@@ -52,3 +52,99 @@
     float: left;
     margin-right: 10px;
 }
+
+@media (max-width: 1600px) {
+
+    #help-info-box {
+        margin-top: 30%;
+    }
+
+}
+
+@media (max-width: 1200px) {
+
+    #help-info-box {
+        margin-top: 50%;
+    }
+
+}
+
+@media (max-width: 992px) {
+
+    #help-info-box {
+        margin-top: 85%;
+        height: 130px;
+    }
+
+    #phone-number-help-box img {
+        transform: rotate(49deg);
+    }
+
+    #phone-number-help-box {
+        font-size: 28px;
+    }
+
+    #request-online-help-btn {
+        padding: 5px 50px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    #help-info-box {
+        margin-top: 105%;
+    }
+
+    #phone-number-help-box {
+        font-size: 29px;
+    }
+
+    #phone-number-help-box img {
+        transform: rotate(49deg);
+    }
+
+    #help-info-content-box {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    #help-info-box {
+        height: 130px;
+    }
+
+    #request-online-help-btn {
+        padding: 10px 50px;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    #help-info-content-box {
+        margin-left: 9%;
+        margin-right: 5%;
+    }
+
+    #message-box {
+        float: none;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #phone-number-help-box {
+        float: none;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    #phone-number-help-box img {
+        transform: rotate(49deg);
+    }
+
+    #help-info-box {
+        height: auto;
+        margin-top: 10%;
+    }
+
+}
