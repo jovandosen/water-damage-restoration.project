@@ -8,6 +8,7 @@ function loadAssets()
     wp_enqueue_style( 'emergencycss', get_template_directory_uri() . '/assets/css/emergency.css', array(), '1.1', 'all');
     wp_enqueue_style( 'helpinfocss', get_template_directory_uri() . '/assets/css/helpinfo.css', array(), '1.1', 'all');
     wp_enqueue_style( 'logodetailscss', get_template_directory_uri() . '/assets/css/logodetails.css', array(), '1.1', 'all');
+    wp_enqueue_style( 'footercss', get_template_directory_uri() . '/assets/css/footer.css', array(), '1.1', 'all');
     wp_enqueue_script( 'appjs', get_template_directory_uri() . '/assets/js/app.js', array ( 'jquery' ), 1.1, true);
     wp_enqueue_script( 'carouseljs', get_template_directory_uri() . '/assets/js/carousel.js', array ( 'jquery' ), 1.1, true);
     $templateDetails = array('templateUrl' => get_template_directory_uri());

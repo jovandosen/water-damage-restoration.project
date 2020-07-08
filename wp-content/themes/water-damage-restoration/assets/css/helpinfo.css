@@ -32,7 +32,7 @@
     transform: rotate(52deg);
 }
 
-#request-online-help-btn {
+#request-online-help-btn, #request-online-help-btn-two {
     padding: 10px 50px;
     margin-left: 5px;
     border: 0;
@@ -40,7 +40,7 @@
     color: white;
 }
 
-#request-online-help-btn:hover {
+#request-online-help-btn:hover, #request-online-help-btn-two:hover {
     color: black;
     background-color: white;
     transition: 0.3s;
