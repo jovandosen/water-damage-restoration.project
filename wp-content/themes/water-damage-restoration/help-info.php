@@ -2,7 +2,7 @@
     <div id="help-info-content-box">
         <div id="message-box">
             <p>
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/warning.png" alt="Warning">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/warning-img.png" alt="Warning">
                 <strong>When disaster strikes, every minute that goes by makes the problem worse. Don't delay!</strong>
             </p>
         </div>

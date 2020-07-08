@@ -5,9 +5,8 @@ function homepageCarousel()
 {
     var basePath = themeData.templateUrl;
     var data = [
-        { img: 'forest.jpg', titleOne: 'Test', titleTwo: 'Foo', description: 'test test', buttonText: 'Example' },
-        { img: 'rocks.jpg', titleOne: 'Test2', titleTwo: 'Foo2', description: 'test test2', buttonText: 'Example2' },
-        { img: 'water.jpg', titleOne: 'Test3', titleTwo: 'Foo3', description: 'test test3', buttonText: 'Example3' }
+        { img: 'slide-img-one.png', titleOne: 'Test', titleTwo: 'Foo', description: 'test test', buttonText: 'Example' },
+        { img: 'slide-img-two.png', titleOne: 'Test2', titleTwo: 'Foo2', description: 'test test2', buttonText: 'Example2' }
     ];
     var img = document.getElementById("carousel-img");
     var imageSelectorsBox = document.getElementById("image-selectors-box");

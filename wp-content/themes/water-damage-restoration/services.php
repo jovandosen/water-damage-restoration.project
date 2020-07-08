@@ -13,7 +13,7 @@
     <div id="our-services-data-box">
         <div id="water-damage">
             <div id="water-damage-img-box">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/forest.jpg" alt="Forest">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Water.png" alt="Water Damage">
             </div>
             <div id="water-damage-title-box">
                 <h3>WATER Damage</h3>
@@ -35,7 +35,7 @@
         </div>
         <div id="storm-damage">
             <div id="storm-damage-img-box">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/rocks.jpg" alt="Rocks">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Storm.png" alt="Storm Damage">
             </div>
             <div id="storm-damage-title-box">
                 <h3>STORM Damage</h3>
@@ -57,7 +57,7 @@
         </div>
         <div id="mold-remediation">
             <div id="mold-remediation-img-box">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/water.jpg" alt="Water">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Mold.png" alt="Mold Remediation">
             </div>
             <div id="mold-remediation-title-box">
                 <h3>MOLD Remediation</h3>
