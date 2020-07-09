@@ -86,9 +86,10 @@
 }
 
 #carousel-details {
+    font-family: Arial, Helvetica, sans-serif;
     position: absolute;
     top: 25%;
-    left: 47%;
+    left: 26%;
     text-align: center;
     color: white;
 }
@@ -551,12 +552,28 @@ input[type="text"] {
     }
 
     #image-selectors-box {
-        left: 38%;
+        left: 40%;
         margin-top: 20px;
     }
 
     #carousel-details {
-        left: 38%;
+        left: -2%;
+    }
+
+    #title-one-content {
+        font-size: 15px;
+    }
+
+    #title-two-content {
+        font-size: 22px;
+    }
+
+    #description-content {
+        padding-top: 8%;
+    }
+
+    #title-one {
+        padding-bottom: 5px;
     }
 
     #carousel-container {

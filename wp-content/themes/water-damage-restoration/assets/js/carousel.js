@@ -5,8 +5,20 @@ function homepageCarousel()
 {
     var basePath = themeData.templateUrl;
     var data = [
-        { img: 'slide-img-one.png', titleOne: 'Test', titleTwo: 'Foo', description: 'test test', buttonText: 'Example' },
-        { img: 'slide-img-two.png', titleOne: 'Test2', titleTwo: 'Foo2', description: 'test test2', buttonText: 'Example2' }
+        { 
+            img: 'slide-img-one.png', 
+            titleOne: 'LOREM IPSUM DOLOR SIT AMET', 
+            titleTwo: 'Lorem ipsum dolor sit amet', 
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 
+            buttonText: 'Lorem ipsum' 
+        },
+        { 
+            img: 'slide-img-two.png', 
+            titleOne: 'LOREM IPSUM DOLOR SIT AMET', 
+            titleTwo: 'Lorem ipsum dolor sit amet', 
+            description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 
+            buttonText: 'Lorem ipsum' 
+        }
     ];
     var img = document.getElementById("carousel-img");
     var imageSelectorsBox = document.getElementById("image-selectors-box");
@@ -44,7 +56,7 @@ function homepageCarousel()
         inActiveItem.removeAttribute("style");
     }
     activeItem.setAttribute("style", "background-color: white");
-    timer = setTimeout(homepageCarousel, 3000);
+    //timer = setTimeout(homepageCarousel, 3000);
 }
 
 homepageCarousel();
