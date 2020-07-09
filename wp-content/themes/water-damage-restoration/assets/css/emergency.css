@@ -56,11 +56,11 @@
 @media (max-width: 1600px) {
 
     #emergency-box {
-        margin-top: 16%;
+        margin-top: 4%;
     }
 
     #do-title h3 {
-        margin-right: 82%;
+        margin-right: 81%;
     }
 
     #do-list {
@@ -68,7 +68,7 @@
     }
 
     #dont-title h3 {
-        margin-right: 78%;
+        margin-right: 77%;
     }
 
     #dont-list {
@@ -80,7 +80,7 @@
 @media (max-width: 1200px) {
 
     #emergency-box {
-        margin-top: 33%;
+        margin-top: 5%;
     }
 
     #do-list {
@@ -88,11 +88,11 @@
     }
 
     #do-title h3 {
-        margin-right: 76%;
+        margin-right: 75%;
     }
 
     #dont-title h3 {
-        margin-right: 70%;
+        margin-right: 68%;
     }
 
     #dont-list {

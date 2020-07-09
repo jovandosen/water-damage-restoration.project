@@ -71,6 +71,14 @@
 
 @media (max-width: 1600px) {
 
+    #our-services-box {
+        margin-top: 3%;
+    }
+
+    #our-services-description {
+        margin-top: 2%;
+    }
+
     #water-damage, #storm-damage, #mold-remediation {
         float: left;
         width: 31%;
@@ -84,6 +92,14 @@
 }
 
 @media (max-width: 1200px) {
+
+    #our-services-box {
+        margin-top: 4%;
+    }
+
+    #our-services-description {
+        margin-top: 3%;
+    }
 
     #water-damage, #storm-damage, #mold-remediation {
         width: 49%;

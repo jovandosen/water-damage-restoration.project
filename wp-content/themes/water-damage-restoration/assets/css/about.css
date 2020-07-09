@@ -41,6 +41,10 @@
 
 @media (max-width: 1600px) {
 
+    #about-us-box {
+        margin-top: 46%;
+    }
+
     #professionals-box, #trusted-box, #our-equipment-box {
         width: 31%;
         float: left;
@@ -55,7 +59,8 @@
 @media (max-width: 1200px) {
 
     #about-us-box {
-        margin-top: 108%;
+        margin-top: 111%;
+        height: 410px;
     }
 
     #professionals-box, #trusted-box, #our-equipment-box {

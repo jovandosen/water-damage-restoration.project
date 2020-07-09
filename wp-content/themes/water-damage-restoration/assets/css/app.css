@@ -265,6 +265,10 @@ input[type="text"] {
 
 @media (max-width: 1600px) {
 
+    #top-info {
+        padding-left: 17%;
+    }
+
     #carousel-details {
         left: 18%;
     }
@@ -276,6 +280,10 @@ input[type="text"] {
 }
 
 @media (max-width: 1200px) {
+
+    #top-info {
+        padding-left: 17%;
+    }
 
     #carousel-details {
         left: 7%;
