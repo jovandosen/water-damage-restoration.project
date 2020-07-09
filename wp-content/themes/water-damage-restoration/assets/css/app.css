@@ -253,7 +253,27 @@ input[type="text"] {
 
 }
 
+@media (max-width: 1600px) {
+
+    #carousel-details {
+        left: 18%;
+    }
+
+    #description-content {
+        padding-top: 4%;
+    }
+
+}
+
 @media (max-width: 1200px) {
+
+    #carousel-details {
+        left: 7%;
+    }
+
+    #description-content {
+        padding-top: 4%;
+    }
 
     #name, #email, #phone-number, #short-description, #contact-button {
         width: 26%;
@@ -298,6 +318,14 @@ input[type="text"] {
 }
 
 @media (max-width: 992px) {
+
+    #carousel-details {
+        left: 1%;
+    }
+
+    #description-content {
+        padding-top: 4%;
+    }
     
     #links-container {
         width: 100%;
@@ -450,7 +478,11 @@ input[type="text"] {
     }
 
     #carousel-details {
-        left: 44%;
+        left: 0;
+    }
+
+    #description-content {
+        padding-top: 4%;
     }
 
     #carousel-container {
