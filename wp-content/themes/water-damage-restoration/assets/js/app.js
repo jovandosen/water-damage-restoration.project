@@ -12,7 +12,7 @@
                 $("#header-content").css({"top":"0"});
             } else {
                 $("#top-info").fadeIn();
-                $("#header-content").css({"top":"7%"});
+                $("#header-content").removeAttr("style");
             }
         });
 

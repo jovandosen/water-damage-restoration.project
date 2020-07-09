@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #navigation-links-container {
@@ -122,6 +123,18 @@
     width: 16px;
     height: 16px;
     transform: rotate(46deg);
+}
+
+#description-content {
+    padding-top: 8%;
+}
+
+#title-one-content {
+    padding-bottom: 1%;
+}
+
+#professionals-details, #trusted-details, #our-equipment-details {
+    margin-left: 120px;
 }
 
 /* Contact Styles */

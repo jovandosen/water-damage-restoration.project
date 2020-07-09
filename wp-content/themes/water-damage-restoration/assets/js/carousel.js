@@ -56,7 +56,7 @@ function homepageCarousel()
         inActiveItem.removeAttribute("style");
     }
     activeItem.setAttribute("style", "background-color: white");
-    //timer = setTimeout(homepageCarousel, 3000);
+    timer = setTimeout(homepageCarousel, 3000);
 }
 
 homepageCarousel();

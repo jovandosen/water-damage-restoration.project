@@ -1,5 +1,5 @@
 #emergency-box {
-    margin-top: 13%;
+    margin-top: 14%;
     margin-left: 17%;
     margin-right: 17%;
 }
@@ -24,13 +24,9 @@
 
 #do-title h3 {
     float: right;
-    margin-right: 87%;
+    margin-right: 86%;
     padding-top: 12px;
     color: #008ae6;
-}
-
-#do-list {
-    color: #0099ff;
 }
 
 #do-list li, #dont-list li {
@@ -39,18 +35,18 @@
 
 #do-list, #dont-list {
     padding-left: 9%;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 #dont-title h3 {
     float: right;
-    margin-right: 84%;
+    margin-right: 83%;
     padding-top: 12px;
 }
 
 #do-list {
     padding-right: 30px;
-    margin-left: 6px;
+    margin-left: 10px;
+    color: #0099ff;
 }
 
 #dont-list {
