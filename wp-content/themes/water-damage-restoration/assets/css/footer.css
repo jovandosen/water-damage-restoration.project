@@ -110,7 +110,131 @@
     color: orange;
 }
 
+@media (max-width: 1600px) {
+
+    #footer-content {
+        margin-top: 11%;
+        height: auto;
+    }
+
+    #footer-emergency-services-description {
+        font-size: 29px;
+    }
+
+    #copy-right-box {
+        padding-top: 10%;
+        padding-right: 73%;
+    }
+
+    #social-media-content {
+        margin-top: 13%;
+    }
+
+}
+
+@media (max-width: 1200px) {
+
+    #footer-content {
+        margin-top: 5%;
+        height: auto;
+    }
+
+    #social-media-content {
+        margin-top: 19%;
+        margin-left: 39%;
+    }
+
+    #footer-emergency-services-description button {
+        margin-left: 0;
+        padding: 10px 50px;
+    }
+
+    #footer-emergency-services-description {
+        font-size: 28px;
+    }
+
+    #copy-right-box {
+        padding-top: 12%;
+        padding-right: 67%;
+    }
+
+}
+
+@media (max-width: 992px) {
+
+    #footer-content {
+        margin-top: 6%;
+        height: auto;
+    }
+
+    #footer-about-us, #footer-our-services {
+        width: 50%;
+    }
+
+    #footer-emergency-services {
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    #social-media-content {
+        margin-top: 38%;
+        margin-left: 37%;
+    }
+
+    #copy-right-box {
+        padding-top: 14%;
+        padding-right: 60%;
+    }
+
+    #footer-emergency-services-description button {
+        margin-left: 13%;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    #footer-about-us, #footer-our-services, #footer-emergency-services {
+        width: 100%;
+        float: none;
+        margin-bottom: 5%;
+    }
+
+    #footer-details {
+        padding-top: 3%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    #footer-content {
+        height: auto;
+    }
+
+    #footer-about-us-description {
+        width: 90%;
+    }
+
+    #social-media-content {
+        margin-top: 5%;
+        margin-left: 33%;
+    }
+
+    #copy-right-box {
+        padding-top: 16%;
+        padding-right: 53%;
+    }
+
+    #footer-emergency-services-description button {
+        margin-left: 13%;
+    }
+
+}
+
 @media (max-width: 576px) {
+
+    #footer-about-us-description {
+        width: 70%;
+    }
 
     #footer-content {
         height: auto;
@@ -132,7 +256,8 @@
     }
 
     #footer-emergency-services-description button {
-        padding: 5px 25px;
+        padding: 10px 25px;
+        margin-left: 22%;
     }
 
     #social-media-content {
