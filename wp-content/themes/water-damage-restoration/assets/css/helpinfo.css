@@ -121,6 +121,10 @@
 
 @media (max-width: 576px) {
 
+    #request-online-help-btn {
+        padding: 10px 57px;
+    }
+
     #help-info-content-box {
         margin-left: 9%;
         margin-right: 5%;

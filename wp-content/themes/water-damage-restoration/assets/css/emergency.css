@@ -1,5 +1,5 @@
 #emergency-box {
-    margin-top: 14%;
+    margin-top: 3%;
     margin-left: 17%;
     margin-right: 17%;
 }
@@ -151,9 +151,9 @@
 @media (max-width: 576px) {
 
     #emergency-box {
-        margin-top: 13%;
-        margin-left: 7%;
-        margin-right: 7%;
+        margin-top: 10%;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 
     #emergency-do-box, #emergency-dont-box {
@@ -171,7 +171,7 @@
     }
 
     #dont-title h3 {
-        margin-right: 69%;
+        margin-right: 68%;
     }
 
     #dont-list {

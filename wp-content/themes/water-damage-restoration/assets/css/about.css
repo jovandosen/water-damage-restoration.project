@@ -1,7 +1,11 @@
 #about-us-box {
-    margin-top: 37%;
-    margin-left: 17%;
-    margin-right: 17%;
+    margin-top: 35%;
+    width: 100%;
+    background-color: #f5f5f0;
+    height: 310px;
+    padding-left: 17%;
+    padding-right: 17%;
+    padding-top: 2%;
 }
 
 #about-us-title-box {
@@ -113,9 +117,14 @@
     }
 
     #about-us-box {
-        margin-right: 5%;
-        margin-left: 5%;
+        margin-right: 0;
+        margin-left: 0;
         margin-top: 10%;
+        height: auto;
+        padding-top: 5%;
+        padding-bottom: 1%;
+        padding-left: 5%;
+        padding-right: 5%;
     }
 
     #professionals-box, #trusted-box, #our-equipment-box {

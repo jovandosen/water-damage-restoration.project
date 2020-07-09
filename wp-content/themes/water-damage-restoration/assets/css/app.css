@@ -37,13 +37,10 @@
     padding: 5px;
 }
 
-#top-info p {
-    margin-left: 17%;
-}
-
 #header-content {
-    width: 65%;
-    left: 17%;
+    width: 100%;
+    padding-left: 17%;
+    padding-right: 17%;
     position: fixed;
     padding-top: 5px;
     background-color: white;
