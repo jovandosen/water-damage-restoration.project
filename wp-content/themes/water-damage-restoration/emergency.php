@@ -6,7 +6,7 @@
         <div id="emergency-do-box">
             <div id="do-title">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/do.png" alt="Do Image">
-                <h4>Do's</h4>
+                <h3>Do's</h3>
             </div>
             <div id="do-list">
                 <ul>
@@ -24,7 +24,7 @@
         <div id="emergency-dont-box">
             <div id="dont-title">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/dont.png" alt="Dont Image">
-                <h4>Dont's</h4>
+                <h3>Dont's</h3>
             </div>
             <div id="dont-list">
                 <ul>

@@ -22,19 +22,29 @@
     border-radius: 50%;
 }
 
-#do-title h4 {
+#do-title h3 {
     float: right;
-    margin-right: 88%;
+    margin-right: 87%;
     padding-top: 12px;
+    color: #008ae6;
+}
+
+#do-list {
+    color: #0099ff;
+}
+
+#do-list li, #dont-list li {
+    margin-bottom: 7px;
 }
 
 #do-list, #dont-list {
     padding-left: 9%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-#dont-title h4 {
+#dont-title h3 {
     float: right;
-    margin-right: 85%;
+    margin-right: 84%;
     padding-top: 12px;
 }
 
@@ -53,16 +63,16 @@
         margin-top: 16%;
     }
 
-    #do-title h4 {
-        margin-right: 83%;
+    #do-title h3 {
+        margin-right: 82%;
     }
 
     #do-list {
         margin-left: 23px;
     }
 
-    #dont-title h4 {
-        margin-right: 79%;
+    #dont-title h3 {
+        margin-right: 78%;
     }
 
     #dont-list {
@@ -81,12 +91,12 @@
         margin-left: 35px;
     }
 
-    #do-title h4 {
-        margin-right: 77%;
+    #do-title h3 {
+        margin-right: 76%;
     }
 
-    #dont-title h4 {
-        margin-right: 72%;
+    #dont-title h3 {
+        margin-right: 70%;
     }
 
     #dont-list {
@@ -101,16 +111,16 @@
         margin-top: 10%;
     }
 
-    #do-title h4 {
-        margin-right: 72%;
+    #do-title h3 {
+        margin-right: 71%;
     }
 
     #do-list {
         margin-left: 39px;
     }
 
-    #dont-title h4 {
-        margin-right: 66%;
+    #dont-title h3 {
+        margin-right: 64%;
     }
 
     #dont-list {
@@ -127,16 +137,17 @@
         margin-right: 7%;
     }
 
-    #do-title h4 {
-        margin-right: 72%;
+    #do-title h3 {
+        margin-right: 71%;
     }
 
     #do-list, #dont-list {
         margin-left: 39px;
     }
 
-    #dont-title h4 {
-        margin-right: 67%;
+    #dont-title h3 {
+        margin-right: 65%;
+        padding-top: 11px;
     }
 
 }
@@ -154,8 +165,8 @@
         width: 100%;
     }
 
-    #do-title h4 {
-        margin-right: 75%;
+    #do-title h3 {
+        margin-right: 74%;
     }
 
     #do-list {
@@ -163,8 +174,8 @@
         padding-right: 0;
     }
 
-    #dont-title h4 {
-        margin-right: 70%;
+    #dont-title h3 {
+        margin-right: 69%;
     }
 
     #dont-list {
