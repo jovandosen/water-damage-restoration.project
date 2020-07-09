@@ -35,6 +35,7 @@
     width: 100%;
     background-color: orange;
     padding: 5px;
+    padding-left: 17%;
 }
 
 #header-content {
@@ -337,6 +338,10 @@ input[type="text"] {
 
 @media (max-width: 992px) {
 
+    #top-info {
+        padding-left: 1%;
+    }
+
     #carousel-details {
         left: 1%;
     }
@@ -444,6 +449,10 @@ input[type="text"] {
 
 @media (max-width: 768px) {
 
+    #top-info {
+        padding-left: 1%;
+    }
+
     #links-container {
         width: 100%;
         display: none;
@@ -547,6 +556,10 @@ input[type="text"] {
 }
 
 @media (max-width: 576px) {
+
+    #top-info {
+        padding-left: 2%;
+    }
 
     #navigation-links-container ul li {
         display: block;
