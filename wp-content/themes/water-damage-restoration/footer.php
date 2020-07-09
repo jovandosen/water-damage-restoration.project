@@ -61,7 +61,8 @@
                         </div>
                     </div>
                     <div id="copy-right-box">
-                        <p>&copy; - Water Restoration</p>
+                        <p id="copy-right-text-one">&copy;2020 - </p>
+                        <p id="copy-right-text-two">Water Restoration</p>
                     </div>
                 </div>
             </div>

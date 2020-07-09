@@ -98,5 +98,50 @@
     padding-top: 9%;
     padding-right: 80%;
     text-align: center;
+}
+
+#copy-right-text-one {
+    float: left;
+    margin-left: 30px;
+    color: white;
+}
+
+#copy-right-text-two {
     color: orange;
+}
+
+@media (max-width: 576px) {
+
+    #footer-content {
+        height: auto;
+    }
+
+    #footer-about-us, #footer-our-services, #footer-emergency-services {
+        width: 100%;
+        float: none;
+        margin-bottom: 10%;
+    }
+
+    #footer-emergency-services-description {
+        font-size: 20px;
+    }
+
+    #footer-emergency-services-description img {
+        width: 20px;
+        height: 20px;
+    }
+
+    #footer-emergency-services-description button {
+        padding: 5px 25px;
+    }
+
+    #social-media-content {
+        margin-left: 20%;
+    }
+
+    #copy-right-box {
+        padding-top: 30%;
+        padding-right: 30%;
+    }
+
 }
