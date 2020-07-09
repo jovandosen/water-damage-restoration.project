@@ -94,10 +94,11 @@
 
     #help-info-box {
         margin-top: 120%;
+        height: 130px;
     }
 
     #phone-number-help-box {
-        font-size: 29px;
+        font-size: 27px;
     }
 
     #phone-number-help-box img {
@@ -107,10 +108,6 @@
     #help-info-content-box {
         margin-left: 5%;
         margin-right: 5%;
-    }
-
-    #help-info-box {
-        height: 130px;
     }
 
     #request-online-help-btn {

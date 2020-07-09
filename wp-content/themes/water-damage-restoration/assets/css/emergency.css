@@ -128,13 +128,13 @@
 @media (max-width: 768px) {
 
     #emergency-box {
-        margin-top: 13%;
+        margin-top: 7%;
         margin-left: 7%;
         margin-right: 7%;
     }
 
     #do-title h3 {
-        margin-right: 71%;
+        margin-right: 69%;
     }
 
     #do-list, #dont-list {
@@ -142,7 +142,7 @@
     }
 
     #dont-title h3 {
-        margin-right: 65%;
+        margin-right: 63%;
         padding-top: 11px;
     }
 

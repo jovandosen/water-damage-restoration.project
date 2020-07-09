@@ -123,6 +123,11 @@
     #our-services-box {
         margin-left: 5%;
         margin-right: 5%;
+        margin-top: 5%;
+    }
+
+    #our-services-description {
+        margin-top: 3%;
     }
 
     #water-damage, #storm-damage, #mold-remediation {

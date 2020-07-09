@@ -78,6 +78,10 @@
         margin-top: 2%;
     }
 
+    #main-logo-box {
+        margin-top: 5%;
+    }
+
 }
 
 @media (max-width: 576px) {
