@@ -45,6 +45,10 @@
         margin-right: 15%;
     }
 
+    #main-logo-box {
+        margin-top: 5%;
+    }
+
     #iicrc-box, #eaa-box {
         float: left;
         width: 50%;
