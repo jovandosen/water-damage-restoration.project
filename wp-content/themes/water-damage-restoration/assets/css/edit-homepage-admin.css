@@ -1,0 +1,26 @@
+#edit-homepage-data-container {
+    margin-top: 2%;
+    margin-left: 1%;
+}
+
+#our-services-title, #our-services-description {
+    width: 20%;
+}
+
+#our-services-title-box, #our-services-description-box {
+    margin-bottom: 10px;
+}
+
+#our-services-button-box button {
+    padding: 5px 15px;
+    background-color: deepskyblue;
+    border: 0;
+    color: white;
+}
+
+#our-services-button-box button:hover {
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+    border: 1px solid black;
+}

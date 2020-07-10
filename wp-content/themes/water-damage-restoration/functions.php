@@ -53,4 +53,40 @@ function registerNavigationMenus()
 
 add_action('init', 'registerNavigationMenus');
 
+function registerHomepageEditScreen()
+{
+    add_menu_page(
+        __('Edit Homepage Data', 'water-damage-restoration'),
+        __('Edit Homepage', 'water-damage-restoration'),
+        'manage_options',
+        'edit-homepage-data',
+        'showHomepageEditContent'
+    );
+}
+
+function showHomepageEditContent()
+{
+    include( get_template_directory() . '/edit-homepage.php' );
+}
+
+add_action('admin_menu', 'registerHomepageEditScreen');
+
+function loadAdminAssets()
+{
+    wp_register_style('edit_homepage_admin_css', get_template_directory_uri() . '/assets/css/edit-homepage-admin.css', false, '1.0.0');
+    wp_enqueue_style('edit_homepage_admin_css');
+    wp_enqueue_script('edit_homepage_admin_js', get_template_directory_uri() . '/assets/js/edit-homepage-admin.js', array ( 'jquery' ), 1.1, true);
+    wp_localize_script('edit_homepage_admin_js', 'edit_homepage_admin_js_obj', ['url' => admin_url('admin-ajax.php')]);
+}
+
+add_action('admin_enqueue_scripts', 'loadAdminAssets');
+
+function ajaxData()
+{
+    echo "WORKS WELL!";
+    die();
+}
+
+add_action('wp_ajax_publish_our_services_data', 'ajaxData');
+
 ?>
