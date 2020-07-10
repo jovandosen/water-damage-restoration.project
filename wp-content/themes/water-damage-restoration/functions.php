@@ -89,7 +89,7 @@ function loadAdminAssets()
 
 add_action('admin_enqueue_scripts', 'loadAdminAssets');
 
-function ajaxData()
+function publishOurServicesDetails()
 {
     check_ajax_referer('nonce_data');
     
@@ -109,6 +109,6 @@ function ajaxData()
     die();
 }
 
-add_action('wp_ajax_publish_our_services_data', 'ajaxData');
+add_action('wp_ajax_publish_our_services_data', 'publishOurServicesDetails');
 
 ?>
