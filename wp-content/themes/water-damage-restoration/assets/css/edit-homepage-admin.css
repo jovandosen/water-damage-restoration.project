@@ -4,7 +4,7 @@
 }
 
 #our-services-title, #our-services-description {
-    width: 20%;
+    width: 100%;
 }
 
 #our-services-title-box, #our-services-description-box {
@@ -23,4 +23,19 @@
     color: black;
     transition: 0.3s;
     border: 1px solid black;
+}
+
+#edit-homepage-our-services {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    width: 25%;
+}
+
+.field-error {
+    border: 1px solid red !important;
+}
+
+.field-error::placeholder {
+    color: red;
 }

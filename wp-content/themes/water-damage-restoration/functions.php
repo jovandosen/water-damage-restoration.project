@@ -76,14 +76,36 @@ function loadAdminAssets()
     wp_register_style('edit_homepage_admin_css', get_template_directory_uri() . '/assets/css/edit-homepage-admin.css', false, '1.0.0');
     wp_enqueue_style('edit_homepage_admin_css');
     wp_enqueue_script('edit_homepage_admin_js', get_template_directory_uri() . '/assets/js/edit-homepage-admin.js', array ( 'jquery' ), 1.1, true);
-    wp_localize_script('edit_homepage_admin_js', 'edit_homepage_admin_js_obj', ['url' => admin_url('admin-ajax.php')]);
+    $nonce = wp_create_nonce('nonce_data');
+    wp_localize_script(
+        'edit_homepage_admin_js', 
+        'edit_homepage_admin_js_obj', 
+        [
+            'url' => admin_url('admin-ajax.php'),
+            'nonce' => $nonce
+        ]
+    );
 }
 
 add_action('admin_enqueue_scripts', 'loadAdminAssets');
 
 function ajaxData()
 {
-    echo "WORKS WELL!";
+    check_ajax_referer('nonce_data');
+    
+    $ourServicesTitle = trim($_POST["ourServicesTitle"]);
+    $ourServicesDescription = trim($_POST["ourServicesDescription"]);
+    
+    if(!empty($ourServicesTitle)){
+        $titleResult = update_option('our_services_title', $ourServicesTitle);
+    }
+
+    if(!empty($ourServicesDescription)){
+        $descriptionResult = update_option('our_services_description', $ourServicesDescription);
+    }
+
+    echo "published";
+
     die();
 }
 
