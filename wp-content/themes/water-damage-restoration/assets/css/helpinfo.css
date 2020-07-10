@@ -33,7 +33,7 @@
 }
 
 #request-online-help-btn, #request-online-help-btn-two {
-    padding: 10px 50px;
+    padding: 10px 60px;
     margin-left: 5px;
     border: 0;
     background-color: #00ccff;
@@ -127,7 +127,7 @@
 @media (max-width: 576px) {
 
     #request-online-help-btn {
-        padding: 10px 57px;
+        padding: 10px 50px;
     }
 
     #help-info-content-box {
