@@ -10,7 +10,7 @@ class HelpInfoMetaBox
 
     public function addMetaBoxData()
     {
-        $screens = ['help_infos'];
+        $screens = ['help_infos', 'footer_details'];
         foreach ($screens as $screen){
             add_meta_box(
                 'help_info_box_id',

@@ -1,49 +1,67 @@
+            <?php
+                $sql = array('post_type' => 'footer_details', 'posts_per_page' => 3);
+                $query = new WP_Query($sql);
+
+                $results = [];
+
+                if($query->have_posts()){
+                    while($query->have_posts()){
+                        $query->the_post();
+                        $btnText = get_post_meta(get_the_ID(), 'help_info_box_id', true);
+                        $obj = new stdClass();
+                        $obj->title = get_the_title();
+                        $obj->content = get_the_content();
+                        $obj->image = get_the_post_thumbnail_url();
+                        $obj->buttonText = $btnText;
+                        $results[] = $obj;
+                    }
+                }
+
+            ?>
             <div id="footer-content" 
                 style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/BG.png);">
                 <div id="footer-details">
                     <div id="footer-about-us">
                         <div id="footer-about-us-image-box">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-img.jpg" alt="About Us Logo">
+                            <img src="<?php echo $results[0]->image; ?>" alt="<?php echo $results[0]->title; ?>">
                         </div>
                         <div id="footer-about-us-data">
                             <div id="footer-about-us-title-box">
-                                <h3>About Us</h3>
+                                <h3><?php echo $results[0]->title; ?></h3>
                             </div>
                             <div id="footer-about-us-description">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <p><?php echo $results[0]->content; ?></p>
                             </div>
                         </div>
                     </div>
                     <div id="footer-our-services">
                         <div id="footer-our-services-image-box">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/key.png" alt="Our Services">
+                            <img src="<?php echo $results[1]->image; ?>" alt="<?php echo $results[1]->title; ?>">
                         </div>
                         <div id="footer-our-services-data">
                             <div id="footer-our-services-title-box">
-                                <h3>Our Services</h3>
+                                <h3><?php echo $results[1]->title; ?></h3>
                             </div>
                             <div id="footer-our-services-description">
-                                <p><a href="#">Water Damage</a></p>
-                                <p class="extra-padd"><a href="#">Storm Damage</a></p>
-                                <p class="extra-padd"><a href="#">Mold Remediation</a></p>
+                                <?php echo $results[1]->content; ?>
                             </div>
                         </div>
                     </div>
                     <div id="footer-emergency-services">
                         <div id="footer-emergency-services-image-box">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/clock.png" alt="Clock">
+                            <img src="<?php echo $results[2]->image; ?>" alt="<?php echo $results[2]->title; ?>">
                         </div>
                         <div id="footer-emergency-services-data">
                             <div id="footer-emergency-services-title-box">
-                                <h3>24/7 Emergency Services</h3>
+                                <h3><?php echo $results[2]->title; ?></h3>
                             </div>
                             <div id="footer-emergency-services-description">
                                 <p>
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/phone.png" alt="Phone">
-                                    <strong>1-800-123-4567</strong>
+                                    <?php echo $results[2]->content; ?>
                                 </p>
-                                <button type="button" id="request-online-help-btn-two">Request Online Help</button>
+                                <button type="button" id="request-online-help-btn-two">
+                                    <?php echo $results[2]->buttonText; ?>
+                                </button>
                             </div>
                         </div>
                     </div>
