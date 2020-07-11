@@ -34,6 +34,7 @@ if(!defined('ABSPATH')){
 require 'include/OurServices.php';
 require 'include/OurServicesMetaBox.php';
 require 'include/AboutUs.php';
+require 'include/EmergencyCase.php';
 
 if(!class_exists('WdrData')){
     class WdrData 
@@ -48,6 +49,7 @@ if(!class_exists('WdrData')){
             $ourServices = new OurServices();
             $ourServicesMetaBox = new OurServicesMetaBox();
             $aboutUs = new AboutUs();
+            $emergencyCase = new EmergencyCase();
         }
 
         public static function create()
