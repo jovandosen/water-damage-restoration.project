@@ -15,10 +15,12 @@
         }
     }
 
+    $aboutUsTitle = get_option('about_us_title');
+
 ?>
 <div id="about-us-box">
     <div id="about-us-title-box">
-        <h1>About Us</h1>
+        <h1><?php echo !empty($aboutUsTitle) ? $aboutUsTitle : 'Default Title'; ?></h1>
     </div>
     <div id="about-us-data">
         <div id="professionals-box">

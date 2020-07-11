@@ -45,7 +45,44 @@
                     },
                     function(data){
                         if(data == 'published'){
-                            alert('You have successfully published details.');
+                            alert('You have successfully published our services details.');
+                        }
+                    }
+                );
+            }
+
+        });
+
+        $("#publish-about-us-data").on("click", function(){
+
+            var aboutUsTitle = $("#about-us-title").val();
+
+            aboutUsTitle.trim();
+
+            var aboutUsTitleError = '';
+            var aboutUsError = false;
+
+            if(aboutUsTitle == ''){
+                aboutUsTitleError = 'Title Required.';
+                aboutUsError = true;
+                $("#about-us-title").addClass('field-error');
+                $("#about-us-title").attr("placeholder", aboutUsTitleError);
+            } else {
+                $("#about-us-title").removeClass('field-error');
+                $("#about-us-title").attr("placeholder", "Enter About Us Title...");
+            }
+
+            if(aboutUsError === false){
+                $.post(
+                    edit_homepage_admin_js_obj.url, 
+                    {
+                        action: 'publish_about_us_data',
+                        _ajax_nonce: edit_homepage_admin_js_obj.nonce,
+                        aboutUsTitle: aboutUsTitle    
+                    },
+                    function(data){
+                        if(data == 'published'){
+                            alert('You have successfully published about us details.');
                         }
                     }
                 );

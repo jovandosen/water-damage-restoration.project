@@ -1,6 +1,7 @@
 <?php
     $ourServicesTitle = get_option('our_services_title');
     $ourServicesDescription = get_option('our_services_description');
+    $aboutUsTitle = get_option('about_us_title');
 ?>
 <div id="edit-homepage-data-container">
     <div id="edit-homepage-our-services">
@@ -23,6 +24,24 @@
                 </div>
                 <div id="our-services-button-box">
                     <button type="button" id="publish-our-services-data">PUBLISH</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="edit-homepage-about-us">
+        <div id="edit-homepage-about-us-title-box">
+            <h1>About Us</h1>
+        </div>
+        <div id="about-us-form-box">
+            <form action="#">
+                <div id="about-us-title-label-box">
+                    <label><font color="red">*</font>About Us Title</label>
+                </div>
+                <div id="about-us-title-box">
+                    <input type="text" name="aboutUsTitle" id="about-us-title" placeholder="Enter About Us Title..." autocomplete="off" value="<?php echo !empty($aboutUsTitle) ? $aboutUsTitle : ''; ?>">
+                </div>
+                <div id="about-us-button-box">
+                    <button type="button" id="publish-about-us-data">PUBLISH</button>
                 </div>
             </form>
         </div>

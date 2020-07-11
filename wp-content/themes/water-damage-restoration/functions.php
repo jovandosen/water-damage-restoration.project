@@ -112,4 +112,21 @@ function publishOurServicesDetails()
 
 add_action('wp_ajax_publish_our_services_data', 'publishOurServicesDetails');
 
+function publishAboutUsDetails()
+{
+    check_ajax_referer('nonce_data');
+
+    $aboutUsTitle = trim($_POST["aboutUsTitle"]);
+
+    if(!empty($aboutUsTitle)){
+        $aboutUsResult = update_option('about_us_title', $aboutUsTitle);
+    }
+
+    echo "published";
+
+    die();
+}
+
+add_action('wp_ajax_publish_about_us_data', 'publishAboutUsDetails');
+
 ?>
