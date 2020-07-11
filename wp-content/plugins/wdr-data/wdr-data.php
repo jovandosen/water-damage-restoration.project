@@ -37,6 +37,7 @@ require 'include/AboutUs.php';
 require 'include/EmergencyCase.php';
 require 'include/HelpInfo.php';
 require 'include/HelpInfoMetaBox.php';
+require 'include/LogoDetails.php';
 
 if(!class_exists('WdrData')){
     class WdrData 
@@ -54,6 +55,7 @@ if(!class_exists('WdrData')){
             $emergencyCase = new EmergencyCase();
             $helpInfo = new HelpInfo();
             $helpInfoMetaBox = new HelpInfoMetaBox();
+            $logoDetails = new LogoDetails();
         }
 
         public static function create()
