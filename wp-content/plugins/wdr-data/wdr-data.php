@@ -36,6 +36,7 @@ require 'include/OurServicesMetaBox.php';
 require 'include/AboutUs.php';
 require 'include/EmergencyCase.php';
 require 'include/HelpInfo.php';
+require 'include/HelpInfoMetaBox.php';
 
 if(!class_exists('WdrData')){
     class WdrData 
@@ -52,6 +53,7 @@ if(!class_exists('WdrData')){
             $aboutUs = new AboutUs();
             $emergencyCase = new EmergencyCase();
             $helpInfo = new HelpInfo();
+            $helpInfoMetaBox = new HelpInfoMetaBox();
         }
 
         public static function create()

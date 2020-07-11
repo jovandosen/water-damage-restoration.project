@@ -41,7 +41,7 @@
     color: red;
 }
 
-#button-text {
+#button-text, #help-info-btn {
     width: 100%;
 }
 
