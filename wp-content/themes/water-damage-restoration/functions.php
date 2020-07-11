@@ -30,6 +30,7 @@ add_filter('wp_title', 'homepageTitle');
 function themeSettings()
 {
     add_theme_support('title-tag');
+    add_theme_support('post-thumbnails');
 
     $logoDefaultSettings = array(
         'height' => 50,
