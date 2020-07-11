@@ -1,3 +1,21 @@
+<?php
+    $sql = array('post_type' => 'about_us', 'posts_per_page' => 3);
+    $query = new WP_Query($sql);
+
+    $results = [];
+
+    if($query->have_posts()){
+        while($query->have_posts()){
+            $query->the_post();
+            $obj = new stdClass();
+            $obj->title = get_the_title();
+            $obj->content = get_the_content();
+            $obj->image = get_the_post_thumbnail_url();
+            $results[] = $obj;
+        }
+    }
+
+?>
 <div id="about-us-box">
     <div id="about-us-title-box">
         <h1>About Us</h1>
@@ -5,43 +23,40 @@
     <div id="about-us-data">
         <div id="professionals-box">
             <div id="professionals-image-box">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/forest.jpg" alt="Forest">
+                <img src="<?php echo $results[0]->image; ?>" alt="<?php echo $results[0]->title; ?>">
             </div>
             <div id="professionals-details">
                 <div id="professionals-details-title">
-                    <h3>Professionals</h3>
+                    <h3><?php echo $results[0]->title; ?></h3>
                 </div>
                 <div id="professionals-details-description">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p><?php echo $results[0]->content; ?></p>
                 </div>
             </div>
         </div>
         <div id="trusted-box">
             <div id="trusted-image-box">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/rocks.jpg" alt="Rocks">
+                <img src="<?php echo $results[1]->image; ?>" alt="<?php echo $results[1]->title; ?>">
             </div>
             <div id="trusted-details">
                 <div id="trusted-details-title">
-                    <h3>Trusted</h3>
+                    <h3><?php echo $results[1]->title; ?></h3>
                 </div>
                 <div id="trusted-details-description">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p><?php echo $results[1]->content; ?></p>
                 </div>
             </div>
         </div>
         <div id="our-equipment-box">
             <div id="our-equipment-image-box">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/water.jpg" alt="Water">
+                <img src="<?php echo $results[2]->image; ?>" alt="<?php echo $results[2]->title; ?>">
             </div>
             <div id="our-equipment-details">
                 <div id="our-equipment-details-title">
-                    <h3>Our Equipment</h3>
+                    <h3><?php echo $results[2]->title; ?></h3>
                 </div>
                 <div id="our-equipment-details-description">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p><?php echo $results[2]->content; ?></p>
                 </div>
             </div>
         </div>
