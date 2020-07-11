@@ -1,15 +1,33 @@
+<?php
+    $sql = array('post_type' => 'help_infos', 'posts_per_page' => 2);
+    $query = new WP_Query($sql);
+
+    $results = [];
+
+    if($query->have_posts()){
+        while($query->have_posts()){
+            $query->the_post();
+            $obj = new stdClass();
+            $obj->title = get_the_title();
+            $obj->content = get_the_content();
+            $obj->image = get_the_post_thumbnail_url();
+            $results[] = $obj;
+        }
+    }
+
+?>
 <div id="help-info-box">
     <div id="help-info-content-box">
         <div id="message-box">
             <p>
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/warning-img.png" alt="Warning">
-                <strong>When disaster strikes, every minute that goes by makes the problem worse. Don't delay!</strong>
+                <img src="<?php echo $results[0]->image; ?>" alt="<?php echo $results[0]->title; ?>">
+                <strong><?php echo $results[0]->content; ?></strong>
             </p>
         </div>
         <div id="phone-number-help-box">
             <p>
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/phone.png" alt="Phone">
-                <strong>1-800-123-4567</strong>
+                <img src="<?php echo $results[1]->image; ?>" alt="<?php echo $results[1]->title; ?>">
+                <strong><?php echo $results[1]->title; ?></strong>
             </p>
             <button type="button" id="request-online-help-btn">Request Online Help</button>
         </div>
