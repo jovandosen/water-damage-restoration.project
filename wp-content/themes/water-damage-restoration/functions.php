@@ -129,4 +129,21 @@ function publishAboutUsDetails()
 
 add_action('wp_ajax_publish_about_us_data', 'publishAboutUsDetails');
 
+function publishEmergencyDetails()
+{
+    check_ajax_referer('nonce_data');
+
+    $emergencyTitle = trim($_POST["emergencyTitle"]);
+
+    if(!empty($emergencyTitle)){
+        $emergencyResult = update_option('emergency_title', $emergencyTitle);
+    }
+
+    echo "published";
+
+    die();
+}
+
+add_action('wp_ajax_publish_emergency_data', 'publishEmergencyDetails');
+
 ?>

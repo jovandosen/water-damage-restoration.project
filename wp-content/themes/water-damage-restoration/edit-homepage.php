@@ -2,6 +2,7 @@
     $ourServicesTitle = get_option('our_services_title');
     $ourServicesDescription = get_option('our_services_description');
     $aboutUsTitle = get_option('about_us_title');
+    $emergencyTitle = get_option('emergency_title');
 ?>
 <div id="edit-homepage-data-container">
     <div id="edit-homepage-our-services">
@@ -42,6 +43,24 @@
                 </div>
                 <div id="about-us-button-box">
                     <button type="button" id="publish-about-us-data">PUBLISH</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="edit-homepage-emergency">
+        <div id="edit-homepage-emergency-title-box">
+            <h1>In Case of Emergency</h1>
+        </div>
+        <div id="emergency-form-box">
+            <form action="#">
+                <div id="emergency-title-label-box">
+                    <label for="emergency"><font color="red">*</font>In Case of Emergency Title</label>
+                </div>
+                <div id="emergency-title-box">
+                    <input type="text" name="emergency" id="emergency" placeholder="Enter Emergency Title..." autocomplete="off" value="<?php echo !empty($emergencyTitle) ? $emergencyTitle : ''; ?>">
+                </div>
+                <div id="emergency-button-box">
+                    <button type="button" id="publish-emergency-data">PUBLISH</button>
                 </div>
             </form>
         </div>

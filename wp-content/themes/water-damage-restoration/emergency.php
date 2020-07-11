@@ -1,6 +1,9 @@
+<?php
+    $emergencyTitle = get_option('emergency_title');
+?>
 <div id="emergency-box">
     <div id="emergency-title-box">
-        <h1>In case of emergency</h1>
+        <h1><?php echo !empty($emergencyTitle) ? $emergencyTitle : 'Default Title'; ?></h1>
     </div>
     <div id="emergency-details-box">
         <div id="emergency-do-box">

@@ -90,5 +90,42 @@
 
         });
 
+        $("#publish-emergency-data").on("click", function(){
+
+            var emergencyTitle = $("#emergency").val();
+
+            emergencyTitle.trim();
+
+            var emergencyTitleError = '';
+            var emergencyError = false;
+
+            if(emergencyTitle == ''){
+                emergencyTitleError = 'Title Required.';
+                emergencyError = true;
+                $("#emergency").addClass('field-error');
+                $("#emergency").attr("placeholder", emergencyTitleError);
+            } else {
+                $("#emergency").removeClass('field-error');
+                $("#emergency").attr("placeholder", "Enter Emergency Title...");
+            }
+
+            if(emergencyError === false){
+                $.post(
+                    edit_homepage_admin_js_obj.url, 
+                    {
+                        action: 'publish_emergency_data',
+                        _ajax_nonce: edit_homepage_admin_js_obj.nonce,
+                        emergencyTitle: emergencyTitle   
+                    },
+                    function(data){
+                        if(data == 'published'){
+                            alert('You have successfully published emergency details.');
+                        }
+                    }
+                );
+            }
+
+        });
+
     });
 }(jQuery, window, document));

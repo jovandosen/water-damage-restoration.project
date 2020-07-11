@@ -2,22 +2,22 @@
     margin-top: 1%;
 }
 
-#our-services-title, #our-services-description, #about-us-title {
+#our-services-title, #our-services-description, #about-us-title, #emergency {
     width: 100%;
 }
 
-#our-services-title-box, #our-services-description-box, #about-us-title-box {
+#our-services-title-box, #our-services-description-box, #about-us-title-box, #emergency-title-box {
     margin-bottom: 10px;
 }
 
-#our-services-button-box button, #about-us-button-box button {
+#our-services-button-box button, #about-us-button-box button, #emergency-button-box button {
     padding: 5px 15px;
     background-color: deepskyblue;
     border: 0;
     color: white;
 }
 
-#our-services-button-box button:hover, #about-us-button-box button:hover {
+#our-services-button-box button:hover, #about-us-button-box button:hover, #emergency-button-box button:hover {
     background-color: white;
     color: black;
     transition: 0.3s;
@@ -45,7 +45,11 @@
     width: 100%;
 }
 
-#edit-homepage-about-us {
+#edit-homepage-about-us, #edit-homepage-emergency {
     width: 25%;
     float: left;
+}
+
+#edit-homepage-about-us {
+    margin-right: 3%;
 }
