@@ -38,3 +38,7 @@
 .field-error::placeholder {
     color: red;
 }
+
+#button-text {
+    width: 100%;
+}

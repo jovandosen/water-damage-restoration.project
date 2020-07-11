@@ -10,10 +10,12 @@
     if($query->have_posts()){
         while($query->have_posts()){
             $query->the_post();
+            $btnText = get_post_meta(get_the_ID(), 'box_id', true);
             $obj = new stdClass();
             $obj->title = get_the_title();
             $obj->content = get_the_content();
             $obj->image = get_the_post_thumbnail_url();
+            $obj->buttonText = $btnText;
             $results[] = $obj;
         }
     }
@@ -39,7 +41,7 @@
             </div>
             <div id="water-damage-read-more-box">
                 <button type="button" class="read-more-btn">
-                    Read more
+                    <?php echo $results[0]->buttonText; ?>
                     <span class="read-more-arrow">&#187;</span>
                 </button>
             </div>
@@ -56,7 +58,7 @@
             </div>
             <div id="storm-damage-read-more-box">
                 <button type="button" class="read-more-btn">
-                    Read more
+                    <?php echo $results[1]->buttonText; ?>
                     <span class="read-more-arrow">&#187;</span>
                 </button>
             </div>
@@ -73,7 +75,7 @@
             </div>
             <div id="mold-remediation-read-more-box">
                 <button type="button" class="read-more-btn">
-                    Read more
+                    <?php echo $results[2]->buttonText; ?>
                     <span class="read-more-arrow">&#187;</span>
                 </button>
             </div>

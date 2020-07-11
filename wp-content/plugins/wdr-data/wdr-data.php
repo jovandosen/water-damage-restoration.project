@@ -32,6 +32,7 @@ if(!defined('ABSPATH')){
 }
 
 require 'include/OurServices.php';
+require 'include/OurServicesMetaBox.php';
 
 if(!class_exists('WdrData')){
     class WdrData 
@@ -44,6 +45,7 @@ if(!class_exists('WdrData')){
         public function boot()
         {
             $ourServices = new OurServices();
+            $ourServicesMetaBox = new OurServicesMetaBox();
         }
 
         public static function create()
