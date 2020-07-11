@@ -17,6 +17,21 @@
                     }
                 }
 
+                $socialMediaResults = [];
+
+                $socialMediaSql = array('post_type' => 'social_media_details', 'posts_per_page' => 3);
+                $socialMediaQuery = new WP_Query($socialMediaSql);
+
+                if($socialMediaQuery->have_posts()){
+                    while($socialMediaQuery->have_posts()){
+                        $socialMediaQuery->the_post();
+                        $objectData = new stdClass();
+                        $objectData->title = get_the_title();
+                        $objectData->image = get_the_post_thumbnail_url();
+                        $socialMediaResults[] = $objectData;
+                    }
+                }
+
             ?>
             <div id="footer-content" 
                 style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/BG.png);">
@@ -69,13 +84,13 @@
                 <div id="social-media-content">
                     <div id="social-media-icons-box">
                         <div class="circle-data">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook.png" alt="Facebook">
+                            <img src="<?php echo $socialMediaResults[0]->image; ?>" alt="<?php echo $socialMediaResults[0]->title; ?>">
                         </div>
                         <div class="circle-data">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter.png" alt="Twitter">
+                            <img src="<?php echo $socialMediaResults[1]->image; ?>" alt="<?php echo $socialMediaResults[1]->title; ?>">
                         </div>
                         <div class="circle-data">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/instagram.png" alt="Instagram">
+                            <img src="<?php echo $socialMediaResults[2]->image; ?>" alt="<?php echo $socialMediaResults[2]->title; ?>">
                         </div>
                     </div>
                     <div id="copy-right-box">

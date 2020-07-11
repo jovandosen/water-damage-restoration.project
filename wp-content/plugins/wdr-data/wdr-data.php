@@ -39,6 +39,7 @@ require 'include/HelpInfo.php';
 require 'include/HelpInfoMetaBox.php';
 require 'include/LogoDetails.php';
 require 'include/FooterDetails.php';
+require 'include/SocialMediaDetails.php';
 
 if(!class_exists('WdrData')){
     class WdrData 
@@ -58,6 +59,7 @@ if(!class_exists('WdrData')){
             $helpInfoMetaBox = new HelpInfoMetaBox();
             $logoDetails = new LogoDetails();
             $footerDetails = new FooterDetails();
+            $socialMediaDetails = new SocialMediaDetails();
         }
 
         public static function create()
