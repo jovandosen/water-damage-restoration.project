@@ -146,4 +146,21 @@ function publishEmergencyDetails()
 
 add_action('wp_ajax_publish_emergency_data', 'publishEmergencyDetails');
 
+function publishCopyRightDetails()
+{
+    check_ajax_referer('nonce_data');
+
+    $copyRightText = trim($_POST["copyRightText"]);
+
+    if(!empty($copyRightText)){
+        $copyRightResult = update_option('copy_right_text', $copyRightText);
+    }
+
+    echo "published";
+
+    die();
+}
+
+add_action('wp_ajax_publish_copy_right_data', 'publishCopyRightDetails');
+
 ?>

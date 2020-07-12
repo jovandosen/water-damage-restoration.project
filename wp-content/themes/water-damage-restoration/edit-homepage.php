@@ -3,6 +3,7 @@
     $ourServicesDescription = get_option('our_services_description');
     $aboutUsTitle = get_option('about_us_title');
     $emergencyTitle = get_option('emergency_title');
+    $copyRightText = get_option('copy_right_text');
 ?>
 <div id="edit-homepage-data-container">
     <div id="edit-homepage-our-services">
@@ -61,6 +62,24 @@
                 </div>
                 <div id="emergency-button-box">
                     <button type="button" id="publish-emergency-data">PUBLISH</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="edit-homepage-copy-right-text">
+        <div id="edit-homepage-copy-right-title-box">
+            <h1>Copy Right Content</h1>
+        </div>
+        <div id="copy-right-form-box">
+            <form action="#">
+                <div id="copy-right-title-label-box">
+                    <label for="copy-right-text"><font color="red">*</font>Copy Right Text</label>
+                </div>
+                <div id="copy-right-box">
+                    <input type="text" name="copyRightText" id="copy-right-text" placeholder="Enter Copy Right Text..." autocomplete="off" value="<?php echo !empty($copyRightText) ? $copyRightText : ''; ?>">
+                </div>
+                <div id="copy-right-button-box">
+                    <button type="button" id="publish-copy-right-data">PUBLISH</button>
                 </div>
             </form>
         </div>

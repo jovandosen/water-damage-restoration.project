@@ -32,6 +32,8 @@
                     }
                 }
 
+                $copyRightText = get_option('copy_right_text'); 
+
             ?>
             <div id="footer-content" 
                 style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/BG.png);">
@@ -95,7 +97,9 @@
                     </div>
                     <div id="copy-right-box">
                         <p id="copy-right-text-one">&copy;2020 - </p>
-                        <p id="copy-right-text-two">Water Restoration</p>
+                        <p id="copy-right-text-two">
+                            <?php echo !empty($copyRightText) ? $copyRightText : 'Default Copy Right Text'; ?>
+                        </p>
                     </div>
                 </div>
             </div>

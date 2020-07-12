@@ -127,5 +127,42 @@
 
         });
 
+        $("#publish-copy-right-data").on("click", function(){
+
+            var copyRightText = $("#copy-right-text").val();
+
+            copyRightText.trim();
+
+            var copyRightTextError = '';
+            var copyRightError = false;
+
+            if(copyRightText == ''){
+                copyRightTextError = 'Title Required.';
+                copyRightError = true;
+                $("#copy-right-text").addClass('field-error');
+                $("#copy-right-text").attr("placeholder", copyRightTextError);
+            } else {
+                $("#copy-right-text").removeClass('field-error');
+                $("#copy-right-text").attr("placeholder", "Enter Copy Right Text...");
+            }
+
+            if(copyRightError === false){
+                $.post(
+                    edit_homepage_admin_js_obj.url, 
+                    {
+                        action: 'publish_copy_right_data',
+                        _ajax_nonce: edit_homepage_admin_js_obj.nonce,
+                        copyRightText: copyRightText   
+                    },
+                    function(data){
+                        if(data == 'published'){
+                            alert('You have successfully published copy right details.');
+                        }
+                    }
+                );
+            }
+
+        });
+
     });
 }(jQuery, window, document));
