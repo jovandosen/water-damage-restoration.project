@@ -15,9 +15,25 @@
     </head>
     <body>
         <div id="top-info">
+            <?php
+
+                $sql = array('post_type' => 'info_bars', 'posts_per_page' => 1);
+                $query = new WP_Query($sql);
+
+                $results = [];
+
+                if($query->have_posts()){
+                    while($query->have_posts()){
+                        $query->the_post();
+                        $obj = new stdClass();
+                        $obj->content = get_the_content();
+                        $results[] = $obj;
+                    }
+                }
+
+            ?>
             <p>
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/phone.png" alt="Phone">
-                24/7 Local Response <strong>1-800-123-4567</strong>
+                <?php echo $results[0]->content; ?>
             </p>
         </div>
         <div id="header-content">
