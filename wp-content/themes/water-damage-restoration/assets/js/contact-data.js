@@ -97,6 +97,102 @@
 
         });
 
+        $("#contact-btn").on("click", function(){
+
+            var contactName = $("#contact-name").val();
+            var contactEmail = $("#contact-email").val();
+            var contactPhoneNumber = $("#contact-phone-number").val();
+            var contactDescription = $("#contact-description").val();
+
+            var contactNameError = '';
+            var contactEmailError = '';
+            var contactPhoneNumberError = '';
+            var contactDescriptionError = '';
+            var contactFormError = false;
+
+            contactName = contactName.trim();
+            contactEmail = contactEmail.trim();
+            contactPhoneNumber = contactPhoneNumber.trim();
+            contactDescription = contactDescription.trim();
+
+            if(contactName == ''){
+                contactNameError = 'Name Required.';
+                contactFormError = true;
+                $("#contact-name").addClass('contact-form-error');
+                $("#contact-name").attr("placeholder", contactNameError);
+            } else {
+                $("#contact-name").removeClass('contact-form-error');
+                $("#contact-name").attr("placeholder", "* Name");
+            }
+
+            if(contactEmail == ''){
+                contactEmailError = 'Email Required.';
+                contactFormError = true;
+                $("#contact-email").addClass('contact-form-error');
+                $("#contact-email").attr("placeholder", contactEmailError);
+            } else if(validateEmail(contactEmail) === false){
+                contactEmailError = 'Invalid Email.';
+                contactFormError = true;
+                $("#contact-email").addClass('contact-form-error');
+                $("#contact-email").attr("placeholder", contactEmailError);
+            } else {
+                $("#contact-email").removeClass('contact-form-error');
+                $("#contact-email").attr("placeholder", "* Email");
+            }
+
+            if(contactPhoneNumber == ''){
+                contactPhoneNumberError = 'Phone Required.';
+                contactFormError = true;
+                $("#contact-phone-number").addClass('contact-form-error');
+                $("#contact-phone-number").attr("placeholder", contactPhoneNumberError);
+            } else if(validatePhone(contactPhoneNumber) === false){
+                contactPhoneNumberError = 'Invalid Phone Format.';
+                contactFormError = true;
+                $("#contact-phone-number").addClass('contact-form-error');
+                $("#contact-phone-number").attr("placeholder", contactPhoneNumberError);
+            } else {
+                $("#contact-phone-number").removeClass('contact-form-error');
+                $("#contact-phone-number").attr("placeholder", "* Phone Number");
+            }
+            
+            if(contactDescription == ''){
+                contactDescriptionError = 'Description Required.';
+                contactFormError = true;
+                $("#contact-description").addClass('contact-form-error');
+                $("#contact-description").attr("placeholder", contactDescriptionError);
+            } else {
+                $("#contact-description").removeClass('contact-form-error');
+                $("#contact-description").attr("placeholder", "* Short Description");
+            }
+            
+            if(contactFormError === false){
+
+                $.post(
+                    contact_form_obj.url, 
+                    {
+                        action: 'side_contact_form_data',
+                        _ajax_nonce: contact_form_obj.nonce,
+                        contactName: contactName,
+                        contactEmail: contactEmail,
+                        contactPhoneNumber: contactPhoneNumber,
+                        contactDescription: contactDescription    
+                    },
+                    function(data){
+                        if(data){
+                            $("#contact-name").val('');
+                            $("#contact-email").val('');
+                            $("#contact-phone-number").val('');
+                            $("#contact-description").val('');
+                            $("#side-form-container").toggle("slow");
+                            alert('You have successfully submitted contact details.');
+                        }
+                    }
+                );
+
+            }
+
+        });
+
     });
 }(jQuery, window, document));
 

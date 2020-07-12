@@ -262,8 +262,6 @@ function addContactFormData()
 
     }
 
-    //
-
     die();
 }
 
@@ -273,5 +271,76 @@ function validatePhoneNumber($phone)
 {   
     return preg_match("/^(\d+-?)+\d+$/", $phone);
 }
+
+function addSideContactFormData()
+{
+    check_ajax_referer('protect_contact_data');
+
+    $contactName = trim($_POST["contactName"]);
+    $contactEmail = trim($_POST["contactEmail"]);
+    $contactPhoneNumber = trim($_POST["contactPhoneNumber"]);
+    $contactDescription = trim($_POST["contactDescription"]);
+
+    $contactNameError = '';
+    $contactEmailError = '';
+    $contactPhoneNumberError = '';
+    $contactDescriptionError = '';
+    $contactDataError = false;
+
+    if(empty($contactName)){
+        $contactNameError = 'Name Required.';
+        $contactDataError = true;
+    }
+
+    if(empty($contactEmail)){
+        $contactEmailError = 'Email Required.';
+        $contactDataError = true;
+    } elseif(!filter_var($contactEmail, FILTER_VALIDATE_EMAIL)){
+        $contactEmailError = 'Invalid Email.';
+        $contactDataError = true;
+    }
+
+    if(empty($contactPhoneNumber)){
+        $contactPhoneNumberError = 'Phone Required.';
+        $contactDataError = true;
+    } else{
+        $phoneNumberValid = validatePhoneNumber($contactPhoneNumber);
+        if(!$phoneNumberValid){
+            $contactPhoneNumberError = 'Invalid Phone.';
+            $contactDataError = true;
+        }
+    }
+
+    if(empty($contactDescription)){
+        $contactDescriptionError = 'Description Required.';
+        $contactDataError = true;
+    }
+
+    if($contactDataError === false){
+
+        $connection = new \mysqli('localhost', 'root', '', 'water_damage_restoration');
+
+        if($connection->connect_error){
+            die('Error while connecting: ' . $connection->connect_error);
+        }
+
+        $contactSql = "INSERT INTO wp_contact_details(name, email, phone, description, created) VALUES(?, ?, ?, ?, ?)";
+
+        $preparedSql = $connection->prepare($contactSql);
+
+        $currentDateTime = date('Y-m-d H:i:s');
+
+        $preparedSql->bind_param("sssss", $contactName, $contactEmail, $contactPhoneNumber, $contactDescription, $currentDateTime);
+
+        $contactResult = $preparedSql->execute();
+
+        echo $contactResult;
+
+    }
+
+    die();
+}
+
+add_action('wp_ajax_side_contact_form_data', 'addSideContactFormData');
 
 ?>
