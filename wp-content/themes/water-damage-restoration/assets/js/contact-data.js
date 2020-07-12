@@ -83,7 +83,13 @@
                         shortDescription: shortDescription    
                     },
                     function(data){
-                        console.log(data);
+                        if(data){
+                            $("#name").val('');
+                            $("#email").val('');
+                            $("#phone-number").val('');
+                            $("#short-description").val('');
+                            alert('You have successfully submitted contact details.');
+                        }
                     }
                 );
 

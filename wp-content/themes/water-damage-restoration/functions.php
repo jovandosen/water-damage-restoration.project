@@ -241,7 +241,25 @@ function addContactFormData()
     }
 
     if($dataError === false){
-        echo "ALL GOOD.";
+        
+        $connection = new \mysqli('localhost', 'root', '', 'water_damage_restoration');
+
+        if($connection->connect_error){
+            die('Error while connecting: ' . $connection->connect_error);
+        }
+
+        $contactSql = "INSERT INTO wp_contact_details(name, email, phone, description, created) VALUES(?, ?, ?, ?, ?)";
+
+        $preparedSql = $connection->prepare($contactSql);
+
+        $currentDateTime = date('Y-m-d H:i:s');
+
+        $preparedSql->bind_param("sssss", $name, $email, $phoneNumber, $shortDescription, $currentDateTime);
+
+        $contactResult = $preparedSql->execute();
+
+        echo $contactResult;
+
     }
 
     //
