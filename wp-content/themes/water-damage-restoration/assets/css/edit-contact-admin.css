@@ -40,3 +40,52 @@
 .contact-table-rows:hover {
     background-color: #ebebe0;
 }
+
+#update-contact-details {
+    margin-top: 3%;
+}
+
+#update-contact-details-name-box, #update-contact-details-email-box, #update-contact-details-phone-box {
+    margin-bottom: 10px;
+    width: 50%;
+}
+
+#update-contact-details-description-box {
+    margin-bottom: 10px;
+    width: 50%;
+}
+
+#con-name, #con-email, #con-phone, #con-description {
+    width: 40%;
+}
+
+#update-contact-btn {
+    background-color: #00ccff;
+    color: white;
+    padding: 8px;
+    border: 0;
+}
+
+#update-contact-btn:hover {
+    background-color: white;
+    color: #0047b3;
+    border: 1px solid black;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#clear-form-btn {
+    margin-left: 5px;
+    padding: 8px;
+    border: 0;
+    color: white;
+    background-color: green;
+}
+
+#clear-form-btn:hover {
+    border: 1px solid black;
+    background-color: white;
+    color: green;
+    transition: 0.3s;
+    cursor: pointer;
+}
