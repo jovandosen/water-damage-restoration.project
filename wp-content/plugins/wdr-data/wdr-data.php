@@ -42,6 +42,7 @@ require 'include/FooterDetails.php';
 require 'include/SocialMediaDetails.php';
 require 'include/CarouselDetails.php';
 require 'include/CarouselDetailsMetaBox.php';
+require 'include/InfoBars.php';
 
 if(!class_exists('WdrData')){
     class WdrData 
@@ -64,6 +65,7 @@ if(!class_exists('WdrData')){
             $socialMediaDetails = new SocialMediaDetails();
             $carouselDetails = new CarouselDetails();
             $carouselDetailsMetaBox = new CarouselDetailsMetaBox();
+            $infoBars = new InfoBars();
         }
 
         public static function create()
