@@ -105,8 +105,29 @@ function showHomepageEditContent()
 
 add_action('admin_menu', 'registerHomepageEditScreen');
 
+function registerContactEditScreen()
+{
+    add_menu_page(
+        __('Contact Form Details', 'water-damage-restoration'),
+        __('View Contact Data', 'water-damage-restoration'),
+        'manage_options',
+        'view-contact-data',
+        'showContactContent'
+    );
+}
+
+function showContactContent()
+{
+    include( get_template_directory() . '/show-contact-data.php' );
+}
+
+add_action('admin_menu', 'registerContactEditScreen');
+
 function loadAdminAssets()
 {
+    wp_register_style('edit_contact_admin_css', get_template_directory_uri() . '/assets/css/edit-contact-admin.css', false, '1.0.0');
+    wp_enqueue_style('edit_contact_admin_css');
+    wp_enqueue_script('edit_contact_admin_js', get_template_directory_uri() . '/assets/js/edit-contact-admin.js', array ( 'jquery' ), 1.1, true);
     wp_register_style('edit_homepage_admin_css', get_template_directory_uri() . '/assets/css/edit-homepage-admin.css', false, '1.0.0');
     wp_enqueue_style('edit_homepage_admin_css');
     wp_enqueue_script('edit_homepage_admin_js', get_template_directory_uri() . '/assets/js/edit-homepage-admin.js', array ( 'jquery' ), 1.1, true);

@@ -1,0 +1,42 @@
+#contact-details-table-box {
+    width: 50%;
+}
+
+#contact-details-table-box table {
+    width: 100%;
+}
+
+#contact-details-table-box table, #contact-details-table-box th, #contact-details-table-box td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#contact-details-table-box td, #contact-details-table-box th {
+    padding: 5px;
+}
+
+.delete-contact-data-button {
+    color: red;
+    background-color: white;
+    cursor: pointer;
+    border: 0;
+}
+
+.delete-contact-data-button:hover {
+    background-color: red;
+    color: white;
+    transition: 0.3s;
+}
+
+.contact-actions-box {
+    text-align: center;
+}
+
+#contact-table-header {
+    background-color: #808080;
+    color: white;
+}
+
+.contact-table-rows:hover {
+    background-color: #ebebe0;
+}
