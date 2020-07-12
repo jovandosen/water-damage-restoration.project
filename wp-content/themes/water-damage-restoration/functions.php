@@ -11,7 +11,28 @@ function loadAssets()
     wp_enqueue_style( 'footercss', get_template_directory_uri() . '/assets/css/footer.css', array(), '1.1', 'all');
     wp_enqueue_script( 'appjs', get_template_directory_uri() . '/assets/js/app.js', array ( 'jquery' ), 1.1, true);
     wp_enqueue_script( 'carouseljs', get_template_directory_uri() . '/assets/js/carousel.js', array ( 'jquery' ), 1.1, true);
-    $templateDetails = array('templateUrl' => get_template_directory_uri());
+
+    $sql = array('post_type' => 'carousel_details', 'posts_per_page' => 2);
+    $query = new WP_Query($sql);
+
+    $results = [];
+
+    if($query->have_posts()){
+        while($query->have_posts()){
+            $query->the_post();
+            $mainTitle = get_post_meta(get_the_ID(), 'carousel_details_box_id', true);
+            $btnText = get_post_meta(get_the_ID(), 'help_info_box_id', true);
+            $obj = new stdClass();
+            $obj->titleOne = $mainTitle;
+            $obj->titleTwo = get_the_title();
+            $obj->description = get_the_content();
+            $obj->img = get_the_post_thumbnail_url();
+            $obj->buttonText = $btnText;
+            $results[] = $obj;
+        }
+    }
+
+    $templateDetails = array('carouselResults' => $results);
     wp_localize_script('carouseljs', 'themeData', $templateDetails);
 }
 
