@@ -11,6 +11,18 @@ function loadAssets()
     wp_enqueue_style( 'footercss', get_template_directory_uri() . '/assets/css/footer.css', array(), '1.1', 'all');
     wp_enqueue_script( 'appjs', get_template_directory_uri() . '/assets/js/app.js', array ( 'jquery' ), 1.1, true);
     wp_enqueue_script( 'carouseljs', get_template_directory_uri() . '/assets/js/carousel.js', array ( 'jquery' ), 1.1, true);
+    wp_enqueue_script( 'contactdatajs', get_template_directory_uri() . '/assets/js/contact-data.js', array ( 'jquery' ), 1.1, true);
+
+    $nonceProtection = wp_create_nonce('protect_contact_data');
+
+    wp_localize_script(
+        'contactdatajs', 
+        'contact_form_obj', 
+        [
+            'url' => admin_url('admin-ajax.php'),
+            'nonce' => $nonceProtection
+        ]
+    );
 
     $sql = array('post_type' => 'carousel_details', 'posts_per_page' => 2);
     $query = new WP_Query($sql);
@@ -183,5 +195,65 @@ function publishCopyRightDetails()
 }
 
 add_action('wp_ajax_publish_copy_right_data', 'publishCopyRightDetails');
+
+function addContactFormData()
+{
+    check_ajax_referer('protect_contact_data');
+
+    $name = trim($_POST["name"]);
+    $email = trim($_POST["email"]);
+    $phoneNumber = trim($_POST["phoneNumber"]);
+    $shortDescription = trim($_POST["shortDescription"]);
+
+    $nameError = '';
+    $emailError = '';
+    $phoneNumberError = '';
+    $shortDescriptionError = '';
+    $dataError = false;
+
+    if(empty($name)){
+        $nameError = 'Name Required.';
+        $dataError = true;
+    }
+
+    if(empty($email)){
+        $emailError = 'Email Required.';
+        $dataError = true;
+    } elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+        $emailError = 'Invalid Email.';
+        $dataError = true;
+    }
+
+    if(empty($phoneNumber)){
+        $phoneNumberError = 'Phone Required.';
+        $dataError = true;
+    } else{
+        $phoneValid = validatePhoneNumber($phoneNumber);
+        if(!$phoneValid){
+            $phoneNumberError = 'Invalid Phone.';
+            $dataError = true;
+        }
+    }
+
+    if(empty($shortDescription)){
+        $shortDescriptionError = 'Description Required.';
+        $dataError = true;
+    }
+
+    if($dataError === false){
+        echo "ALL GOOD.";
+    }
+
+    //
+
+    die();
+}
+
+add_action('wp_ajax_contact_form_data', 'addContactFormData');
+
+function validatePhoneNumber($phone)
+{   
+    return preg_match("/^(\d+-?)+\d+$/", $phone);
+}
 
 ?>

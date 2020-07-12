@@ -137,6 +137,14 @@
 
 /* Contact Styles */
 
+.contact-form-error {
+    border: 2px solid red !important;
+}
+
+.contact-form-error::placeholder {
+    color: red;
+}
+
 #contact-container {
     background-color: orange;
     width: 100%;
