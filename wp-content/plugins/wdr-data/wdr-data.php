@@ -40,6 +40,7 @@ require 'include/HelpInfoMetaBox.php';
 require 'include/LogoDetails.php';
 require 'include/FooterDetails.php';
 require 'include/SocialMediaDetails.php';
+require 'include/CarouselDetails.php';
 
 if(!class_exists('WdrData')){
     class WdrData 
@@ -60,6 +61,7 @@ if(!class_exists('WdrData')){
             $logoDetails = new LogoDetails();
             $footerDetails = new FooterDetails();
             $socialMediaDetails = new SocialMediaDetails();
+            $carouselDetails = new CarouselDetails();
         }
 
         public static function create()
