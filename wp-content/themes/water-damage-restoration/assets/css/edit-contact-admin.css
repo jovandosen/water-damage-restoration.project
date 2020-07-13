@@ -89,3 +89,11 @@
     transition: 0.3s;
     cursor: pointer;
 }
+
+.con-form-error {
+    border: 1px solid red !important;
+}
+
+.con-form-error::placeholder {
+    color: red;
+}

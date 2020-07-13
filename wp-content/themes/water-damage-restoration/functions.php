@@ -404,4 +404,78 @@ function deleteContactDetails()
 
 add_action('wp_ajax_delete_contact_details', 'deleteContactDetails');
 
+function updateContactDetails()
+{
+    check_ajax_referer('edit_contact_nonce');
+
+    $conName = trim($_POST["conName"]);
+    $conEmail = trim($_POST["conEmail"]);
+    $conPhone = trim($_POST["conPhone"]);
+    $conDescription = trim($_POST["conDescription"]);
+    $conId = (int) $_POST["conId"];
+
+    $conNameError = '';
+    $conEmailError = '';
+    $conPhoneError = '';
+    $conDescriptionError = '';
+    $conError = false;
+
+    if(empty($conName)){
+        $conNameError = 'Name Required.';
+        $conError = true;
+    }
+
+    if(empty($conEmail)){
+        $conEmailError = 'Email Required.';
+        $conError = true;
+    } elseif(!filter_var($conEmail, FILTER_VALIDATE_EMAIL)){
+        $conEmailError = 'Invalid Email.';
+        $conError = true;
+    }
+
+    if(empty($conPhone)){
+        $conPhoneError = 'Phone Required.';
+        $conError = true;
+    } else{
+        $conPhoneNumberValid = validatePhoneNumber($conPhone);
+        if(!$conPhoneNumberValid){
+            $conPhoneError = 'Invalid Phone.';
+            $conError = true;
+        }
+    }
+
+    if(empty($conDescription)){
+        $conDescriptionError = 'Description Required.';
+        $conError = true;
+    }
+
+    if($conError === false){
+
+        $connection = new \mysqli('localhost', 'root', '', 'water_damage_restoration');
+
+        if($connection->connect_error){
+            die('Error while connecting: ' . $connection->connect_error);
+        }
+
+        $updateSql = "UPDATE wp_contact_details SET name=?, email=?, phone=?, description=? WHERE id=?";
+
+        $updateData = $connection->prepare($updateSql);
+
+        $updateData->bind_param("ssssi", $conName, $conEmail, $conPhone, $conDescription, $conId);
+
+        $updateResult = $updateData->execute();
+
+        if($updateResult){
+            echo "updated";
+        } else {
+            echo "not updated";
+        }
+
+    }
+
+    die();
+}
+
+add_action('wp_ajax_update_contact_details', 'updateContactDetails');
+
 ?>

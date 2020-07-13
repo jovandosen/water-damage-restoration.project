@@ -69,6 +69,7 @@
                     <button type="button" id="update-contact-btn">UPDATE</button>
                     <button type="button" id="clear-form-btn">CLEAR FORM</button>
                 </div>
+                <input type="hidden" name="conId" id="con-id">
             </form>
         </div>
     <?php endif; ?>    
