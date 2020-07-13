@@ -4,6 +4,7 @@ Project information:
 
 Theme Name: water-damage-restoration
 Plugin Name: wdr-data
+Database Sql: water_damage_restoration.sql ( fajl se nalazi u root-u projekta )
 Github repo: https://github.com/jovandosen/water-damage-restoration.project
 
 U wdr-data plugin-u sam kreirao Custom Post Type-ove koji se koriste za dodavanje podataka za Homepage.
